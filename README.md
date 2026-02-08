@@ -1,167 +1,110 @@
-![Atelier Logos Studio](./public/og-image.png)
+# Stereos
 
-# Atelier Logos Studio
+**git-blame for LLM-driven teams**
 
-> *Atelier (ατελιέ) - A workshop or studio where artists work. | Logos (Λόγος) - The act of speaking, discourse, or argument.*
+Org-wide LLM usage attribution and change management. Stereos is the only tool that provides deep drilldowns into your team's LLM usage -- understand how LLMs are impacting your projects and your team.
 
-**An LLM-enabled Solutions Studio**
+This repo contains the marketing site at [trystereos.com](https://www.trystereos.com). The core Stereos product is at [github.com/StereosOrg/stereos](https://github.com/StereosOrg/stereos).
 
-We are a bespoke software studio helping clients build scalable, testable, and beautiful software while adopting LLMs in a sane manner.
+## What is Stereos?
 
-## 🚀 Features
+Stereos is a central usage ledger for your team's LLM-enabled tool usage. It lets you:
 
-- **Modern Tech Stack**: Built with Next.js 15, React 19, and TypeScript
-- **Beautiful UI**: Powered by Radix UI and Tailwind CSS
-- **Authentication**: Secure auth with Supabase
-- **Payment Processing**: Stripe integration for seamless transactions
-- **Blog System**: Built-in blog with markdown support
-- **User Profiles**: Complete user management system
-- **Responsive Design**: Mobile-first approach with modern design principles
-- **PWA Ready**: PWA capabilities with service worker
+- **Deep Drilldowns** -- See changes in realtime with file-level diffs. Understand who changed what, and what tool they used.
+- **Git-centric Model** -- Commit attribution, diffs, and provenance for your LLM usage data.
+- **Collaborative** -- Comment on changes, share insights, and collaborate across your team.
+- **Ledger Export** -- Export your usage ledger to JSON for custom analysis, internal dashboards, or compliance needs.
+- **Deterministic** -- Multiple layers of trigger fallbacks such as Language Model Tools API and file system watchers.
+- **IDE Agnostic** -- Published in VSIX format to the [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=Stereos.stereos-provenance).
+- **OpenAPI Compliant** -- Built on open standards. Easy to integrate into your products.
+- **Source Available** -- Elastic v2 license. We believe in transparency and community collaboration.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-### Core
 - **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS + Stylus modules
-- **UI Components**: Radix UI + Shadcn/ui
-- **State Management**: Zustand
-- **Package Manager**: Bun
-
-### Backend & Services
-- **Database**: Supabase
-- **Authentication**: Supabase Auth
+- **Runtime**: React 19
+- **Styling**: Tailwind CSS
+- **UI**: Radix UI + shadcn/ui
+- **Content**: MDX
+- **Auth**: Supabase
 - **Payments**: Stripe
-- **Real-time**: Pusher
-- **Push**: Pusher Push Notifications
+- **Analytics**: Segment + PostHog
 
-### Development Tools
-- **Linting**: ESLint
-- **Formatting**: Standard.js rules
-- **Icons**: Lucide React + Radix Icons
-
-## 🏃‍♂️ Getting Started
+## Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ or Bun
 - Git
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/www.atelierlogos.studio.git
-   cd www.atelierlogos.studio
-   ```
-
-2. **Install dependencies**
-   ```bash
-   bun install
-   # or
-   npm install
-   ```
-
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   ```
-   Fill in your environment variables for Supabase, Stripe, Pusher, etc.
-
-4. **Run the development server**
-   ```bash
-   bun dev
-   # or
-   npm run dev
-   ```
-
-5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-## 📁 Project Structure
-
-```
-├── app/                    # Next.js App Router
-│   ├── api/               # API routes
-│   ├── auth/              # Authentication pages
-│   ├── blog/              # Blog system
-│   ├── onboarding/        # User onboarding
-│   ├── profile/           # User profiles
-│   └── support/           # Support pages
-├── components/            # Reusable UI components
-├── hooks/                 # Custom React hooks
-├── lib/                   # Utility functions and configurations
-├── public/                # Static assets
-├── scripts/               # Build and deployment scripts
-└── styles/                # Global styles and Stylus modules
-```
-
-## 🎨 Design System
-
-Our design system follows these principles:
-- **Consistent**: Using a unified color palette and typography
-- **Accessible**: WCAG compliant components
-- **Responsive**: Mobile-first design approach
-- **Modern**: Clean, minimalist aesthetic with thoughtful animations
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-1. Connect your repository to Vercel
-2. Set up environment variables
-3. Deploy automatically on push to main
-
-### Manual Deployment
 ```bash
-bun run build
-bun run start
+git clone https://github.com/StereosOrg/www.trystereos.com.git
+cd www.trystereos.com
+npm install
 ```
 
-## 🤝 Contributing
+### Environment Variables
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Workflow
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes following our coding standards
-4. Commit your changes (`git commit -m 'Add amazing feature'`)
-5. Push to the branch (`git push origin feature/amazing-feature`)
-6. Open a Pull Request
-
-## 📋 Scripts
-
-- `bun dev` - Start development server
-- `bun build` - Build for production
-- `bun start` - Start production server
-- `bun lint` - Run ESLint
-
-## 🔧 Variables
-
-Create a `.env.local` file with the following variables:
+Copy `.env.example` to `.env.local` and fill in the required values:
 
 ```env
 # Supabase
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
 
 # Stripe
-STRIPE_SECRET_KEY=your_stripe_secret_key
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
-
-# Pusher
-PUSHER_APP_ID=your_pusher_app_id
-PUSHER_KEY=your_pusher_key
-PUSHER_SECRET=your_pusher_secret
-PUSHER_CLUSTER=your_pusher_cluster
+STRIPE_SECRET_KEY=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
 ```
 
-## 📞 Support
+### Development
 
-- 📧 Support: [Create an account](https://www.atelierlogos.studio/onboarding) and chat with us
-- 💬 Schedule a Call: Available on the homepage
+```bash
+npm run dev
+```
 
----
+Open [http://localhost:3000](http://localhost:3000).
 
-**Built with ❤️ in Knoxville, TN**
+### Build
+
+```bash
+npm run build
+npm run start
+```
+
+## Project Structure
+
+```
+app/
+  page.tsx              # Homepage
+  blog/                 # Blog system (MDX)
+  guides/               # Guide pages
+  topics/               # Topic hubs
+  industries/           # Industry pages
+  government/           # Government landing page
+  startups/             # Startups landing page
+  partners/             # Partners page
+components/
+  sidebar.tsx           # Main navigation sidebar
+  pricing.tsx           # Pricing section
+  hero-section.tsx      # Hero component
+  features.tsx          # Features grid
+  footer.tsx            # Site footer
+  ui/                   # shadcn/ui primitives
+data/                   # Static content and data
+lib/                    # Utilities and config
+styles/                 # Global styles
+public/                 # Static assets
+```
+
+## Deployment
+
+Deployed on Vercel. Pushes to `main` trigger automatic deploys.
+
+## License
+
+Elastic License v2 (ELv2)

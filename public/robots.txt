@@ -1,0 +1,20 @@
+# robots.txt for Atelier Logos
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.atelierlogos.studio/sitemap.xml
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /admin/
+
+# Allow all guides, blog posts, and public content
+Allow: /guides/
+Allow: /blog/
+Allow: /topics/
+Allow: /industries/
+
+# Crawl delay (optional, adjust if needed)
+# Crawl-delay: 1
