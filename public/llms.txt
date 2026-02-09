@@ -1,6 +1,6 @@
 # Stereos
 
-> Git-blame for LLM-driven teams. Org-wide LLM usage attribution and change management.
+> LLM tool usage ledger for teams. Org-wide LLM usage attribution and change management.
 
 ## About
 

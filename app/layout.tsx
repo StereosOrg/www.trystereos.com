@@ -21,14 +21,14 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: "Stereos | git-blame for LLM-driven teams ",
+  title: "Stereos | LLM tool usage ledger for teams",
   description: "Org-wide LLM usage attribution and change management",
   generator: 'v0.dev',
   keywords: ['change management', 'attribution', 'developer enablement', 'process management', 'observability', 'analytics', 'LLMs', 'AI'],
   authors: [{ name: 'Stereos' }],
   creator: 'Stereos',
   openGraph: {
-    title: "Stereos | git-blame for LLM-driven teams",
+    title: "Stereos | LLM tool usage ledger for teams",
     description: "Org-wide LLM usage attribution and change management",
     url: "https://www.trystereos.com",
     siteName: "Stereos",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         url: "https://www.trystereos.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Stereos - git-blame for LLM-driven teams",
+        alt: "Stereos - LLM tool usage ledger for teams",
       }
     ],
     locale: "en_US",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stereos | git-blame for LLM-driven teams",
+    title: "Stereos | LLM tool usage ledger for teams",
     description: "Org-wide LLM usage attribution and change management",
     images: ["https://www.trystereos.com/og-image.png"]
   },

@@ -1,6 +1,6 @@
 # Stereos
 
-**git-blame for LLM-driven teams**
+**LLM tool usage ledger for teams**
 
 Org-wide LLM usage attribution and change management. Stereos is the only tool that provides deep drilldowns into your team's LLM usage -- understand how LLMs are impacting your projects and your team.
 
