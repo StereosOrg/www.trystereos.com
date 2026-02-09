@@ -27,7 +27,7 @@ export function Sidebar() {
             <div className="border-4 border-black bg-white p-0.5 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
               <Image src="/logo.png" alt="Stereos" width={28} height={28} />
             </div>
-            <span className="text-xl font-black uppercase tracking-tight">Stereos</span>
+            <span className="text-xl font-black tracking-tight">STEREOS</span>
           </Link>
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -81,7 +81,7 @@ export function Sidebar() {
             <div className="border-4 border-black bg-white p-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               <Image src="/logo.png" alt="Stereos" width={44} height={44} />
             </div>
-            <span className="text-2xl font-black uppercase tracking-tight">Stereos</span>
+            <span className="text-2xl font-black tracking-tight">STEREOS</span>
           </Link>
         </div>
 

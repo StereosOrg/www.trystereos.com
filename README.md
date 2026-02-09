@@ -4,7 +4,7 @@
 
 Org-wide LLM usage attribution and change management. Stereos is the only tool that provides deep drilldowns into your team's LLM usage -- understand how LLMs are impacting your projects and your team.
 
-This repo contains the marketing site at [trystereos.com](https://www.trystereos.com). The core Stereos product is at [github.com/StereosOrg/stereos](https://github.com/StereosOrg/stereos).
+This repo contains the homepage site at [trystereos.com](https://www.trystereos.com). The core Stereos product is at [github.com/StereosOrg/stereos](https://github.com/StereosOrg/stereos).
 
 ## What is Stereos?
 
@@ -81,14 +81,6 @@ npm run start
 ```
 app/
   page.tsx              # Homepage
-  blog/                 # Blog system (MDX)
-  guides/               # Guide pages
-  topics/               # Topic hubs
-  industries/           # Industry pages
-  government/           # Government landing page
-  startups/             # Startups landing page
-  partners/             # Partners page
-components/
   sidebar.tsx           # Main navigation sidebar
   pricing.tsx           # Pricing section
   hero-section.tsx      # Hero component
