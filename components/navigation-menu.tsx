@@ -47,7 +47,6 @@ const navItems: NavItem[] = [
     icon: BookOpen,
     hasDropdown: true,
     dropdownItems: [
-      { label: "Blog", href: "/blog" },
       { label: "Topic Hubs", href: "/topics" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Data Processing Agreement", href: "/dpa" },

@@ -1,21 +1,8 @@
 "use client"
-import Image from "next/image"
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
-
-interface BlogPost {
-  id: string
-  title: string
-  summary: string
-  author: string
-  published: string
-  image: string
-  tags: string[]
-  content: string
-  url: string
-}
+import { useState } from 'react'
 
 interface ProjectCardProps {
   title: string
@@ -25,8 +12,6 @@ interface ProjectCardProps {
 }
 
 export function HowItWorks() {
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([])
-  const [blogLoading, setBlogLoading] = useState(true)
   const router = useRouter()
   // Sign-up form state
   const [step, setStep] = useState<'form' | 'checkEmail'>('form')
@@ -75,33 +60,6 @@ export function HowItWorks() {
   //     subscription.unsubscribe()
   //   }
   // }, [router])
-
-  useEffect(() => {
-    async function fetchPosts() {
-      try {
-        const response = await fetch('/api/blog')
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
-        }
-        const text = await response.text()
-        let posts
-        try {
-          posts = JSON.parse(text)
-        } catch (parseError) {
-          console.error('Failed to parse JSON response:', text)
-          throw new Error('Invalid JSON response from server')
-        }
-        setBlogPosts(posts.slice(0, 3)) // Get only the first 3 posts
-      } catch (error) {
-        console.error('Error fetching blog posts:', error)
-        setBlogPosts([]) // Set empty array on error
-      } finally {
-        setBlogLoading(false)
-      }
-    }
-    
-    fetchPosts()
-  }, [])
 
   return (
     <section id="how-it-works" className="py-16">
@@ -177,62 +135,6 @@ export function HowItWorks() {
           </div>
         </div>
 
-          {/* Blog Section 
-          <div className="mt-12">
-            <h3 className="text-3xl font-bold mb-6 mt-6 text-center">Our Blog</h3>
-            {blogLoading ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="flex flex-col gap-2">
-                    <div className="bg-muted rounded-md aspect-video mb-4 animate-pulse"></div>
-                    <div className="h-6 bg-muted rounded animate-pulse mb-2"></div>
-                    <div className="h-4 bg-muted rounded animate-pulse mb-1"></div>
-                    <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
-                  </div>
-                ))}
-              </div>
-            ) : blogPosts.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {blogPosts.map((post) => (
-                  <div 
-                    key={post.id} 
-                    className="flex flex-col gap-2 hover:opacity-75 cursor-pointer"
-                    onClick={() => router.push(post.url)}
-                  >
-                    <div className="bg-muted rounded-md aspect-video mb-4 flex items-center justify-center overflow-hidden">
-                      {post.image ? (
-                        <Image
-                          src={post.image}
-                          alt={post.title}
-                          width={400}
-                          height={225}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <span className="text-6xl">📝</span>
-                      )}
-                    </div>
-                    <h3 className="text-xl tracking-tight">{post.title}</h3>
-                    <p className="text-muted-foreground text-base">
-                      {post.summary}
-                    </p>
-                    {post.published && (
-                      <p className="text-sm text-muted-foreground">
-                        {new Date(post.published).toLocaleDateString()}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-12">
-                <div className="text-6xl mb-4">📝</div>
-                <p className="text-muted-foreground">No blog posts available at the moment.</p>
-                <p className="text-sm text-muted-foreground mt-2">Check back soon for new content!</p>
-              </div>
-            )}
-          </div>
-          */}
         </div>
       </div>
     </section>

@@ -122,10 +122,6 @@ Includes:
 - Top Voice AI Providers: https://www.trystereos.com/guides/top-voice-ai-providers
 - Topic Hub: https://www.trystereos.com/topics/strategic-tooling
 
-### Blog
-Technical insights on LLM-driven development, change management, and compliance.
-- All posts: https://www.trystereos.com/blog
-
 ## Key Differentiators
 
 1. **LLM Provenance**: First tool to provide deep visibility into LLM contribution attribution at the org level

@@ -23,7 +23,6 @@ const footerLinkSections = [
   {
     title: "Resources",
     links: [
-      { label: "Blog", href: "/blog" },
       { label: "Topic Hubs", href: "/topics" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Data Processing Agreement", href: "/dpa" },

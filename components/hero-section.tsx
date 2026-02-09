@@ -221,7 +221,7 @@ export function HeroSection() {
           <div className="space-y-3 text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-semibold text-foreground">See one of our builds</h3>
             <p className="text-muted-foreground">
-              We built <strong>Colony</strong>, a vendor operations platform that helps companies manage their external workforce with ease. <a href="/blog" className="text-primary hover:underline font-medium">Read more about our approach</a>.
+              We built <strong>Colony</strong>, a vendor operations platform that helps companies manage their external workforce with ease.
             </p>
           </div>
           <div className="flex justify-center">

@@ -19,12 +19,6 @@ export const relatedContentMap: Record<string, Array<{
       type: "guide"
     },
     {
-      title: "How We Build Complex Apps",
-      description: "Our approach to building software with type theory and LLM assistance",
-      href: "/blog/2025-12-18-how-we-build-complex-apps",
-      type: "blog"
-    },
-    {
       title: "Spec-Driven Development Hub",
       description: "Comprehensive guides on specification-driven development",
       href: "/topics/spec-driven-development",
@@ -44,12 +38,6 @@ export const relatedContentMap: Record<string, Array<{
       href: "/guides/compliance-mapping",
       type: "guide"
     },
-    {
-      title: "How We Build Complex Apps",
-      description: "Real-world examples of spec-driven development in action",
-      href: "/blog/2025-12-18-how-we-build-complex-apps",
-      type: "blog"
-    }
   ],
   "compliance-mapping": [
     {
@@ -173,26 +161,6 @@ export const relatedContentMap: Record<string, Array<{
       type: "guide"
     }
   ],
-  "2025-12-18-how-we-build-complex-apps": [
-    {
-      title: "LLM-Assisted Development",
-      description: "Enterprise guide to LLM-assisted development",
-      href: "/guides/llm-assisted-coding",
-      type: "guide"
-    },
-    {
-      title: "Writing Effective Specifications",
-      description: "Master the art of writing specifications for LLM development",
-      href: "/guides/writing-effective-specs",
-      type: "guide"
-    },
-    {
-      title: "All Topic Hubs",
-      description: "Explore comprehensive guides on software development",
-      href: "/topics",
-      type: "topic"
-    }
-  ]
 }
 
 export function getRelatedContent(slug: string) {
