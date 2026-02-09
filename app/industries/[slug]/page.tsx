@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
     }
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.atelierlogos.studio'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.trystereos.com'
   const guideUrl = `${baseUrl}/industries/${params.slug}`
 
   const ogImageUrl = `/api/og/industries?title=${encodeURIComponent(guide.title)}&subtitle=${encodeURIComponent(guide.metaDescription)}`
@@ -107,7 +107,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
     notFound()
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.atelierlogos.studio'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.trystereos.com'
   const guideUrl = `${baseUrl}/industries/${params.slug}`
 
   // Table of contents

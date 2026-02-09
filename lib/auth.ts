@@ -25,7 +25,7 @@ export const auth = betterAuth({
         : "localhost",
       rpName: "Atelier Logos",
       origin: process.env.NODE_ENV === "production"
-        ? "https://www.atelierlogos.studio"
+        ? "https://www.trystereos.com"
         : "http://localhost:3000",
     }),
     twoFactor({

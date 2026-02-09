@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.atelierlogos.studio'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.trystereos.com'
   const postUrl = `${baseUrl}/blog/${params.slug}`
 
   const ogImageUrl = `/api/og/blog?title=${encodeURIComponent(post.title)}&subtitle=${encodeURIComponent(post.summary)}`
@@ -104,7 +104,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   // Create the full URL for sharing
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.atelierlogos.studio'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.trystereos.com'
   const postUrl = `${baseUrl}/blog/${params.slug}`
 
   return (

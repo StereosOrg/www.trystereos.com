@@ -5,7 +5,7 @@ import { getAllTopicHubs } from '@/lib/topic-hubs'
 import { getAllGuideSlugs } from '@/lib/guides'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_BASE_URL || 'https://www.atelierlogos.studio'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_BASE_URL || 'https://www.trystereos.com'
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [

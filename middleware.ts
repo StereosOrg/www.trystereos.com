@@ -6,10 +6,10 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get('host') || ''
 
   // Define the canonical hostname
-  const canonicalHostname = 'www.atelierlogos.studio'
+  const canonicalHostname = 'www.trystereos.com'
 
   // Check if we need to redirect to canonical URL
-  // This handles: atelierlogos.studio -> www.atelierlogos.studio
+  // This handles: atelierlogos.studio -> www.trystereos.com
   if (hostname !== canonicalHostname && hostname !== 'localhost' && !hostname.startsWith('localhost:')) {
     url.hostname = canonicalHostname
     url.protocol = 'https'

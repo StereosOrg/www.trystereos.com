@@ -1,197 +1,151 @@
-# Atelier Logos
+# Stereos
 
-> Atelier (atelier) – a workshop or studio where artists work.
-> Logos (λόγος) – the act of speaking, discourse, or reasoned thought.
+> Git-blame for LLM-driven teams. Org-wide LLM usage attribution and change management.
 
 ## About
 
-Atelier Logos provides winning AI engineering strategy. We strategize and build agentic software solutions using spec-driven development and MCP-native architectures to empower businesses to leverage AI effectively and responsibly.
+Stereos is the only tool that provides deep drilldowns into your team's LLM usage. It tracks how LLMs are impacting your projects and team productivity, giving engineering leaders full visibility into AI-assisted code changes with provenance and attribution built on Git principles.
 
-**Website**: https://www.atelierlogos.studio
-**Contact**: james@atelierlogos.com
-**GitHub**: https://github.com/orgs/atelierlogos
-**LinkedIn**: https://www.linkedin.com/company/atelierlogos/
+**Website**: https://www.trystereos.com
+**App**: https://app.trystereos.com
+**Contact**: james@trystereos.com
+**GitHub**: https://github.com/StereosOrg/stereos
+**License**: Elastic License v2 (ELv2) - Source Available
 
-## Services & Offerings
+## Product
 
-### Written Plans + Technical Demo
-**Starting at ~$20,000**
+### What Stereos Does
 
-Custom MCP architecture planning and technical demonstration service including:
-- Custom MCP (Model Context Protocol) architecture plan
-- Technical demo of core features
-- Risks and mitigation strategies
-- 3rd party connection ideation
-- Security overview
-- Project timeline estimate
+Stereos provides LLM usage attribution for engineering teams. It answers the questions: Who changed what? What LLM tool did they use? How is AI impacting our codebase?
 
-**Book a consultation**: https://cal.com/team/atelierlogos/mcp-strategy
+### Core Features
 
-### Core Competencies
+1. **Deep Drilldowns**
+   - See changes in real-time with file-level diffs
+   - Understand who changed what and what LLM tool they used
+   - Full provenance tracking for LLM-assisted contributions
 
-1. **Spec-Driven Development**
-   - Transform development velocity through systematic specification writing
-   - Enable 3-4x development velocity gains
-   - Embed compliance requirements directly in specifications
-   - Learn more: https://www.atelierlogos.studio/guides/writing-effective-specs
+2. **Git-Centric Model**
+   - Built on Git principles: commit attribution, diffs, and provenance
+   - Fits into existing development workflows
+   - No learning curve for developers
 
-2. **LLM-Assisted Development**
-   - Enterprise guide to strategic LLM integration
-   - Systematic approach to AI-assisted coding
-   - Type-safe development with LLM assistance
-   - Learn more: https://www.atelierlogos.studio/guides/llm-assisted-coding
+3. **Collaborative**
+   - Comment on changes and share insights
+   - Collaborate across teams on LLM usage patterns
+   - Org-wide visibility into AI adoption
 
-3. **Compliance Engineering**
-   - Map regulatory requirements to technical specifications
-   - Automated compliance verification and evidence generation
-   - Support for SOC 2, HIPAA, GDPR, PCI-DSS, FedRAMP
-   - Reduce audit preparation from weeks to days
-   - Learn more: https://www.atelierlogos.studio/guides/compliance-mapping
+4. **Ledger Export**
+   - Export usage ledger to JSON
+   - Custom analysis and internal dashboards
+   - Compliance-ready data export
 
-4. **MCP-Native Architectures**
-   - Model Context Protocol implementation
-   - Agentic software solutions
-   - Real-time AI integration
-   - Custom MCP server development
+5. **Deterministic Tracking**
+   - Multiple layers of trigger fallbacks
+   - Language Model Tools API integration
+   - File system watchers for reliable capture
 
-## Industry Expertise
+6. **IDE Agnostic**
+   - Published as a VSIX extension on VS Code Marketplace
+   - Works with your existing editor setup
 
-### Government Technology (GovTech)
-- FedRAMP compliance and ATO acceleration
-- OSCAL-based compliance automation
-- Legacy system modernization
-- Learn more: https://www.atelierlogos.studio/government
+7. **OpenAPI Compliant**
+   - Built on open standards
+   - Easy integration into existing products and workflows
+
+8. **Source Available**
+   - Elastic License v2 (ELv2)
+   - Transparency and community collaboration
+
+## Pricing
+
+**$450/month** + $0.03 per ledger event
+
+Includes:
+- Unlimited team members
+- Usage analytics and reports
+- Priority support
+- SOC 2 alignment
+- 100% serverless architecture
+- 24/7 support
+
+**14-day free trial**: https://app.trystereos.com
+
+## Industry Solutions
+
+### SaaS
+- AI-native enablement for SaaS teams
+- Learn more: https://www.trystereos.com/industries/saas
 
 ### Healthcare Technology (HealthTech)
-- HIPAA compliance implementation
-- Protected Health Information (PHI) security
-- Healthcare data privacy with LLMs
-- Learn more: https://www.atelierlogos.studio/guides/hipaa-implementation
+- HIPAA-compliant LLM usage tracking
+- Learn more: https://www.trystereos.com/industries/healthtech
 
 ### Financial Technology (FinTech)
-- PCI-DSS compliance
-- Payment data security
-- Financial regulatory compliance
-- Learn more: https://www.atelierlogos.studio/industries/fintech
+- PCI-DSS compliant usage attribution
+- Learn more: https://www.trystereos.com/industries/fintech
+
+### Government Technology (GovTech)
+- FedRAMP-aligned LLM change management
+- Learn more: https://www.trystereos.com/government
 
 ### Startups
-- Rapid MVP development with compliance built-in
-- Spec-driven development for early-stage companies
-- AI-first product development
-- Learn more: https://www.atelierlogos.studio/startups
-
-## Featured Projects
-
-### Colony
-The backoffice for modern vendor ops. A vendor operations platform that helps companies manage their external workforce with ease.
-- Category: VendorOps
-- Demo: https://demo.arcade.software/l3ClAIEprcx2X8eXBUGj
-
-### Fugu
-Angr-powered binary analysis visualization library for security research and reverse engineering.
-- Category: DevTools
-
-### Nooklanes
-Cedar-policy powered authorization service for CUI-sensitive infrastructure with real-time policy enforcement.
-- Category: Security
+- LLM usage visibility from day one
+- Learn more: https://www.trystereos.com/startups
 
 ## Knowledge Base
 
-### Comprehensive Guides
+### Guides
 
 **Spec-Driven Development**
-- Writing Effective Specifications: https://www.atelierlogos.studio/guides/writing-effective-specs
-- LLM-Assisted Coding: https://www.atelierlogos.studio/guides/llm-assisted-coding
-- Topic Hub: https://www.atelierlogos.studio/topics/spec-driven-development
+- Writing Effective Specifications: https://www.trystereos.com/guides/writing-effective-specs
+- LLM-Assisted Coding: https://www.trystereos.com/guides/llm-assisted-coding
+- Topic Hub: https://www.trystereos.com/topics/spec-driven-development
 
 **Compliance Engineering**
-- Compliance Mapping: https://www.atelierlogos.studio/guides/compliance-mapping
-- GDPR Compliance: https://www.atelierlogos.studio/guides/gdpr-compliance
-- HIPAA Implementation: https://www.atelierlogos.studio/guides/hipaa-implementation
-- SOC 2 Implementation: https://www.atelierlogos.studio/guides/soc2-implementation
-- Topic Hub: https://www.atelierlogos.studio/topics/compliance
+- Compliance Mapping: https://www.trystereos.com/guides/compliance-mapping
+- HIPAA Implementation: https://www.trystereos.com/guides/hipaa-implementation
+- SOC 2 Implementation: https://www.trystereos.com/guides/soc2-implementation
+- GDPR Compliance: https://www.trystereos.com/guides/gdpr-compliance
+- Topic Hub: https://www.trystereos.com/topics/compliance
 
 **LLM Security**
-- Prompt Injection Defense: https://www.atelierlogos.studio/guides/prompt-injection-defense
-- LLM Output Validation: https://www.atelierlogos.studio/guides/llm-output-validation
-- Data Privacy with LLMs: https://www.atelierlogos.studio/guides/data-privacy-llm
-- Top LLM Security Tools: https://www.atelierlogos.studio/guides/top-llm-security-tools
-- Topic Hub: https://www.atelierlogos.studio/topics/llm-security
+- Prompt Injection Defense: https://www.trystereos.com/guides/prompt-injection-defense
+- LLM Output Validation: https://www.trystereos.com/guides/llm-output-validation
+- Data Privacy with LLMs: https://www.trystereos.com/guides/data-privacy-llm
+- Top LLM Security Tools: https://www.trystereos.com/guides/top-llm-security-tools
+- Topic Hub: https://www.trystereos.com/topics/llm-security
 
 **Strategic Tooling**
-- Top Compliance Automation Tools: https://www.atelierlogos.studio/guides/top-compliance-automation-tools
-- Top Policy Enforcement Libraries: https://www.atelierlogos.studio/guides/top-policy-enforcement-libraries
-- Top Voice AI Providers: https://www.atelierlogos.studio/guides/top-voice-ai-providers
-- Topic Hub: https://www.atelierlogos.studio/topics/strategic-tooling
+- Top Compliance Automation Tools: https://www.trystereos.com/guides/top-compliance-automation-tools
+- Top Policy Enforcement Libraries: https://www.trystereos.com/guides/top-policy-enforcement-libraries
+- Top Voice AI Providers: https://www.trystereos.com/guides/top-voice-ai-providers
+- Topic Hub: https://www.trystereos.com/topics/strategic-tooling
 
 ### Blog
-Technical insights on building complex software with type theory, specifications, and LLM assistance.
-- All posts: https://www.atelierlogos.studio/blog
-- Latest: Breaking the Compliance Wall - Building Visual MCP UI Apps for FedRAMP & HIPAA with OSCAL
-- Featured: How we build complex software with type theory, strong specifications, and a little bit of LLM magic
-
-## Technology Stack
-
-**AI & LLM Integration**
-- OpenAI, Claude, Gemini integration
-- Model Context Protocol (MCP)
-- Custom MCP server development
-- LLM security and validation
-
-**Policy-as-Code**
-- AWS Cedar policy language
-- OPAL (Open Policy Administration Layer)
-- OPA (Open Policy Agent)
-- Real-time policy synchronization
-
-**Compliance & Security**
-- OSCAL (Open Security Controls Assessment Language)
-- Automated compliance verification
-- Policy enforcement libraries
-- Security control implementation
-
-**Development Approach**
-- Spec-driven development methodology
-- Type-safe development with TypeScript
-- Automated testing and verification
-- Continuous compliance monitoring
+Technical insights on LLM-driven development, change management, and compliance.
+- All posts: https://www.trystereos.com/blog
 
 ## Key Differentiators
 
-1. **Compliance by Design**: Build regulatory requirements into specifications from day one, not as an afterthought
-2. **Spec-First Development**: Comprehensive specifications enable 3-4x development velocity with LLM assistance
-3. **Policy-as-Code**: Real-time policy enforcement with Cedar and OPAL for automated compliance
-4. **MCP-Native**: Deep expertise in Model Context Protocol for agentic AI systems
-5. **Proven Results**: Reduce audit preparation from 3-4 weeks to 2-3 days, 95%+ first-time pass rates
+1. **LLM Provenance**: First tool to provide deep visibility into LLM contribution attribution at the org level
+2. **Git-Native**: Leverages familiar Git workflows — diffs, commits, and blame — for LLM tracking
+3. **Compliance Ready**: SOC 2 aligned out of the box with exportable audit trails
+4. **Developer Experience**: Zero learning curve, integrates with existing workflows via VS Code extension
+5. **Source Transparency**: Open source (ELv2) builds trust and enables community contribution
+6. **Deterministic**: Reliable capture with multiple fallback layers — no usage data lost
 
-## ROI & Business Impact
+## Partners
 
-**Compliance Cost Reduction**
-- 57% reduction in single-framework compliance costs
-- 71% reduction for multi-framework compliance
-- 5-year value: $1.19M+ in reduced compliance costs
-- Payback period: <3 months
+We're building the ecosystem for LLM usage attribution. If you're an LLM tool stakeholder interested in partnership, reach out at james@trystereos.com.
 
-**Development Velocity**
-- 3-4x faster development with spec-driven approach
-- 50% faster time-to-certification
-- 12-month earlier enterprise revenue potential
-
-**Audit Performance**
-- 95%+ first-time audit pass rate
-- 2-3 days audit preparation (vs 3-4 weeks traditional)
-- Automated evidence generation in <1 hour
-
-## Newsletter
-
-Stay updated on our workflow, learnings, and launches. We share thoughtful notes about once a month.
-Subscribe: https://www.atelierlogos.studio/#newsletter
+Learn more: https://www.trystereos.com/partners
 
 ## Legal
 
-- Privacy Policy: https://www.atelierlogos.studio/privacy
-- Data Processing Agreement: https://www.atelierlogos.studio/dpa
+- Privacy Policy: https://www.trystereos.com/privacy
+- Data Processing Agreement: https://www.trystereos.com/dpa
 
 ---
 
-Last updated: January 15, 2026
+Last updated: February 8, 2026
