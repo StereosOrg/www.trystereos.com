@@ -49,7 +49,7 @@ Stereos provides LLM usage attribution for engineering teams. It answers the que
    - Published as a VSIX extension on VS Code Marketplace
    - Works with your existing editor setup
 
-7. **OpenAPI Compliant**
+7. **OTEL Compliant**
    - Built on open standards
    - Easy integration into existing products and workflows
 

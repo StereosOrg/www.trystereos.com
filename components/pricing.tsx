@@ -7,23 +7,27 @@ const features = [
   "Usage analytics & reports",
   "Ledger export (JSON)",
   "Priority support",
-  "OpenAPI compliant",
+  "OTEL compliant",
 ]
 
 const billableEvents = [
   {
+    event: "platform_fee",
+    label: "Platform access",
+    per: "Per month",
+    price: "$450",
+  },
+  {
     event: "tool_profile",
-    unit: "1 per tool profile",
-    notes: "Each tool profile",
+    label: "Tool profile",
+    per: "Per tool profile",
     price: "$75",
-    interval: "per month",
   },
   {
     event: "telemetry_event",
-    unit: "1 per telemetry event",
-    notes: "Each telemetry event",
+    label: "Telemetry event",
+    per: "Per telemetry event",
     price: "$0.0025",
-    interval: "per telemetry event",
   },
 ]
 
@@ -38,7 +42,7 @@ export function Pricing() {
               14-day free trial
             </span>
             <h3 className="text-xl font-display font-bold mb-1">Pay as you go</h3>
-            <p className="text-sm text-gray-600 mb-6">Only pay for what you use. No flat monthly fee.</p>
+            <p className="text-sm text-gray-600 mb-6">$450/month platform fee plus usage-based pricing for tool profiles and telemetry.</p>
 
             <div className="space-y-4">
               {billableEvents.map((item) => (
@@ -46,16 +50,16 @@ export function Pricing() {
                   key={item.event}
                   className="bg-white/70 border-2 border-black p-4"
                 >
-                  <div className="flex items-baseline justify-between mb-1">
-                    <code className="text-sm font-bold bg-gray-100 border border-gray-300 px-2 py-0.5">
+                  <div className="flex items-baseline justify-between gap-3 mb-1">
+                    <code className="text-sm font-semibold bg-gray-100 border border-gray-300 px-2 py-0.5 shrink-0">
                       {item.event}
                     </code>
-                    <div className="text-right">
-                      <span className="text-2xl font-display font-black">{item.price}</span>
-                      <span className="text-sm text-gray-600 ml-1">{item.interval}</span>
+                    <div className="text-right min-w-0">
+                      <span className="text-xl font-sans font-semibold tabular-nums">{item.price}</span>
+                      <span className="block text-sm text-gray-600 font-medium">{item.per}</span>
                     </div>
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">{item.unit} &middot; {item.notes}</p>
+                  <p className="text-xs text-gray-500 mt-1">{item.label}</p>
                 </div>
               ))}
             </div>

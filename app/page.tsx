@@ -98,7 +98,7 @@ export default function Home() {
               {/* Small Card - OpenAPI Compliant */}
               <div className="border-4 border-black bg-gradient-to-br from-amber-100 to-yellow-50 p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 <Code2 className="w-8 h-8 mb-3 text-amber-600" />
-                <h3 className="text-xl font-display font-bold mb-2">OpenAPI Compliant</h3>
+                <h3 className="text-xl font-display font-bold mb-2">OTEL Compliant</h3>
                 <p className="text-gray-600">
                   Built on open standards. Easy to integrate into your products. 
                 </p>
@@ -204,13 +204,11 @@ export default function Home() {
               Pricing Commitments
             </h2>
             <p className="text-lg text-muted-foreground mb-12 max-w-2xl">
-              Our pricing is simple and transparent. You only pay for what you use — $75/mo per tool profile and $0.12 per ledger event. We also offer a 14-day free trial.
+              Our pricing is simple and transparent. You only pay for what you use — $450/mo platform fee plus usage-based pricing for tool profiles and telemetry. We also offer a 14-day free trial.
             </p>
-
-            <Pricing />
           </div>
         </section>
-
+        <Pricing />
         {/* Stats Bar */}
         <section className="border-t-4 border-black bg-primary">
           <div className="max-w-5xl mx-auto px-6 py-8">

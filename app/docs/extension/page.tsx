@@ -1094,7 +1094,7 @@ resource['service.name']     → service_name
                         <TableCell className="font-mono text-sm">ledger_event</TableCell>
                         <TableCell>1 per event</TableCell>
                         <TableCell>Each event</TableCell>
-                        <TableCell>$0.12 per event</TableCell>
+                        <TableCell>$0.0025 per event</TableCell>
                       </TableRow>
                     </TableBody>
                   </NeuTable>
