@@ -5,18 +5,29 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Github, Home, Handshake } from "lucide-react"
+import { Menu, X, Github, Home, Handshake, BookOpen, ChevronDown, Radio, Puzzle } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navItems = [
   { href: "/", label: "Home", icon: Home },
   { href: "/partners", label: "Partners", icon: Handshake },
+  {
+    label: "Docs",
+    icon: BookOpen,
+    children: [
+      { href: "/docs/telemetry", label: "Telemetry", icon: Radio },
+      { href: "/docs/extension", label: "Extension", icon: Puzzle },
+    ],
+  },
   { href: "https://github.com/StereosOrg/stereos", label: "GitHub", icon: Github, external: true },
 ]
 
 export function Sidebar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [docsOpen, setDocsOpen] = useState(false)
   const pathname = usePathname()
+
+  const isDocsActive = pathname.startsWith("/docs")
 
   return (
     <>
@@ -43,11 +54,66 @@ export function Sidebar() {
           <nav className="border-t-4 border-black bg-background p-4 space-y-2">
             {navItems.map((item) => {
               const Icon = item.icon
+
+              // Dropdown item (Docs)
+              if ("children" in item && item.children) {
+                return (
+                  <div key={item.label}>
+                    <button
+                      onClick={() => setDocsOpen(!docsOpen)}
+                      className={cn(
+                        "flex items-center justify-between w-full gap-3 px-4 py-3 border-2 border-black font-medium transition-all",
+                        isDocsActive
+                          ? "bg-primary shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                          : "bg-white hover:bg-gray-50 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]"
+                      )}
+                    >
+                      <span className="flex items-center gap-3">
+                        <Icon size={18} />
+                        {item.label}
+                      </span>
+                      <ChevronDown
+                        size={16}
+                        className={cn(
+                          "transition-transform",
+                          docsOpen && "rotate-180"
+                        )}
+                      />
+                    </button>
+                    {docsOpen && (
+                      <div className="ml-4 mt-1 space-y-1">
+                        {item.children.map((child) => {
+                          const ChildIcon = child.icon
+                          const isChildActive = pathname === child.href
+                          return (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              onClick={() => setIsOpen(false)}
+                              className={cn(
+                                "flex items-center gap-3 px-4 py-2.5 border-2 border-black font-medium transition-all text-sm",
+                                isChildActive
+                                  ? "bg-primary shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+                                  : "bg-white hover:bg-gray-50 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]"
+                              )}
+                            >
+                              <ChildIcon size={16} />
+                              {child.label}
+                            </Link>
+                          )
+                        })}
+                      </div>
+                    )}
+                  </div>
+                )
+              }
+
+              // Regular item
               const isActive = pathname === item.href
               return (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={item.href!}
                   target={item.external ? "_blank" : undefined}
                   rel={item.external ? "noopener noreferrer" : undefined}
                   onClick={() => setIsOpen(false)}
@@ -89,11 +155,65 @@ export function Sidebar() {
         <nav className="flex-1 p-4 space-y-2">
           {navItems.map((item) => {
             const Icon = item.icon
+
+            // Dropdown item (Docs)
+            if ("children" in item && item.children) {
+              return (
+                <div key={item.label}>
+                  <button
+                    onClick={() => setDocsOpen(!docsOpen)}
+                    className={cn(
+                      "flex items-center justify-between w-full gap-3 px-4 py-3 border-2 border-black font-medium transition-all",
+                      isDocsActive
+                        ? "bg-primary shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                        : "bg-white hover:bg-gray-50 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]"
+                    )}
+                  >
+                    <span className="flex items-center gap-3">
+                      <Icon size={18} />
+                      {item.label}
+                    </span>
+                    <ChevronDown
+                      size={16}
+                      className={cn(
+                        "transition-transform",
+                        docsOpen && "rotate-180"
+                      )}
+                    />
+                  </button>
+                  {docsOpen && (
+                    <div className="ml-4 mt-1 space-y-1">
+                      {item.children.map((child) => {
+                        const ChildIcon = child.icon
+                        const isChildActive = pathname === child.href
+                        return (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className={cn(
+                              "flex items-center gap-3 px-4 py-2.5 border-2 border-black font-medium transition-all text-sm",
+                              isChildActive
+                                ? "bg-primary shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+                                : "bg-white hover:bg-gray-50 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]"
+                            )}
+                          >
+                            <ChildIcon size={16} />
+                            {child.label}
+                          </Link>
+                        )
+                      })}
+                    </div>
+                  )}
+                </div>
+              )
+            }
+
+            // Regular item
             const isActive = pathname === item.href
             return (
               <Link
                 key={item.href}
-                href={item.href}
+                href={item.href!}
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noopener noreferrer" : undefined}
                 className={cn(
