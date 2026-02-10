@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { CheckIcon, ArrowRight } from "lucide-react"
+import { CheckIcon } from "lucide-react"
 
 const features = [
   "Unlimited team members",
@@ -10,22 +10,54 @@ const features = [
   "OpenAPI compliant",
 ]
 
+const billableEvents = [
+  {
+    event: "tool_profile",
+    unit: "1 per tool profile",
+    notes: "Each tool profile",
+    price: "$75",
+    interval: "per month",
+  },
+  {
+    event: "telemetry_event",
+    unit: "1 per telemetry event",
+    notes: "Each telemetry event",
+    price: "$0.0025",
+    interval: "per telemetry event",
+  },
+]
+
 export function Pricing() {
   return (
     <div className="border-4 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
       <div className="grid grid-cols-1 md:grid-cols-2">
-        {/* Left Column — Price + CTA */}
+        {/* Left Column — Pricing breakdown */}
         <div className="bg-gradient-to-br from-emerald-100 via-teal-50 to-cyan-100 p-8 md:p-10 flex flex-col justify-between gap-8">
           <div>
             <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] bg-white border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-6">
               14-day free trial
             </span>
-            <div className="mb-2">
-              <span className="text-6xl md:text-7xl font-display font-black tracking-tight">$450</span>
-            </div>
-            <div className="text-lg font-bold text-gray-700 mb-4">/month</div>
-            <div className="inline-block px-4 py-2 bg-white/70 border-2 border-black text-sm font-bold">
-              + $0.03 per ledger event
+            <h3 className="text-xl font-display font-bold mb-1">Pay as you go</h3>
+            <p className="text-sm text-gray-600 mb-6">Only pay for what you use. No flat monthly fee.</p>
+
+            <div className="space-y-4">
+              {billableEvents.map((item) => (
+                <div
+                  key={item.event}
+                  className="bg-white/70 border-2 border-black p-4"
+                >
+                  <div className="flex items-baseline justify-between mb-1">
+                    <code className="text-sm font-bold bg-gray-100 border border-gray-300 px-2 py-0.5">
+                      {item.event}
+                    </code>
+                    <div className="text-right">
+                      <span className="text-2xl font-display font-black">{item.price}</span>
+                      <span className="text-sm text-gray-600 ml-1">{item.interval}</span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-1">{item.unit} &middot; {item.notes}</p>
+                </div>
+              ))}
             </div>
           </div>
 

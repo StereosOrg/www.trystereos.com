@@ -204,7 +204,7 @@ export default function Home() {
               Pricing Commitments
             </h2>
             <p className="text-lg text-muted-foreground mb-12 max-w-2xl">
-              Our pricing is simple and transparent. We charge a flat fee monthly, plus a small usage fee based on the number of ledger events you generate. We also offer a 14-day free trial.
+              Our pricing is simple and transparent. You only pay for what you use — $75/mo per tool profile and $0.12 per ledger event. We also offer a 14-day free trial.
             </p>
 
             <Pricing />
