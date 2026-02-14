@@ -1,6 +1,6 @@
 "use client"
 
-import { Sidebar } from "@/components/sidebar"
+import { TopNav } from "@/components/top-nav"
 import {
   Table,
   TableHeader,
@@ -60,9 +60,9 @@ function NeuTable({ children }: { children: React.ReactNode }) {
 export default function ExtensionDocsPage() {
   return (
     <div className="min-h-screen bg-background bg-grid-black/[0.02]">
-      <Sidebar />
+      <TopNav />
 
-      <main className="md:ml-64 pt-20 md:pt-0">
+      <main className="pt-16">
         <section className="px-6 py-16 md:py-24">
           <div className="max-w-4xl mx-auto xl:mr-72">
             {/* Card */}
@@ -1085,16 +1085,16 @@ resource['service.name']     → service_name
                     </TableHeader>
                     <TableBody>
                       <TableRow>
-                        <TableCell className="font-mono text-sm">tool_profile</TableCell>
-                        <TableCell>1 per tool profile</TableCell>
-                        <TableCell>Each tool profile</TableCell>
-                        <TableCell>$75 per month</TableCell>
+                        <TableCell className="font-mono text-sm">managed_key</TableCell>
+                        <TableCell>1 per managed key</TableCell>
+                        <TableCell>Each managed key</TableCell>
+                        <TableCell>$75 per managed key</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-mono text-sm">ledger_event</TableCell>
-                        <TableCell>1 per event</TableCell>
-                        <TableCell>Each event</TableCell>
-                        <TableCell>$0.0025 per event</TableCell>
+                        <TableCell className="font-mono text-sm">telemetry_event</TableCell>
+                        <TableCell>1 per telemetry event</TableCell>
+                        <TableCell>Each telemetry event</TableCell>
+                        <TableCell>$0.0025 per telemetry event</TableCell>
                       </TableRow>
                     </TableBody>
                   </NeuTable>

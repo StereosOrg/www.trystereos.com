@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Sidebar } from "@/components/sidebar"
+import { TopNav } from "@/components/top-nav"
 import { Mail } from "lucide-react"
 
 export const metadata = {
@@ -10,9 +10,9 @@ export const metadata = {
 export default function PartnersPage() {
   return (
     <div className="min-h-screen bg-background bg-grid-black/[0.02]">
-      <Sidebar />
+      <TopNav />
 
-      <main className="md:ml-64 pt-20 md:pt-0">
+      <main className="pt-16">
         <section className="min-h-screen px-6 py-16 md:py-24 flex items-center justify-center">
           <div className="max-w-2xl mx-auto">
             <div className="border-4 border-black bg-white p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">

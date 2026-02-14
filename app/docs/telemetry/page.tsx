@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Sidebar } from "@/components/sidebar"
+import { TopNav } from "@/components/top-nav"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import {
   Table,
@@ -86,9 +86,9 @@ export default function DocsPage() {
 
   return (
     <div className="min-h-screen bg-background bg-grid-black/[0.02]">
-      <Sidebar />
+      <TopNav />
 
-      <main className="md:ml-64 pt-20 md:pt-0">
+      <main className="pt-16">
         <section className="px-6 py-16 md:py-24">
           <div className="max-w-4xl mx-auto xl:mr-72">
             {/* Card */}
