@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Github, Home, Handshake, BookOpen, ChevronDown, Radio, Puzzle } from "lucide-react"
+import { Menu, X, Github, Home, Handshake, BookOpen, ChevronDown, Radio } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navItems = [
@@ -16,7 +16,6 @@ const navItems = [
     icon: BookOpen,
     children: [
       { href: "/docs/telemetry", label: "Telemetry", icon: Radio },
-      { href: "/docs/extension", label: "Extension", icon: Puzzle },
     ],
   },
   { href: "https://github.com/StereosOrg/stereos", label: "GitHub", icon: Github, external: true },

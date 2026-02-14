@@ -1,147 +1,84 @@
 # Stereos
 
-> LLM tool usage ledger for teams. Org-wide LLM usage attribution and change management.
+> Enterprise key management and spend OS for LLM usage. LLM spend management and managed key provisioning at the team level.
 
 ## About
 
-Stereos is the only tool that provides deep drilldowns into your team's LLM usage. It tracks how LLMs are impacting your projects and team productivity, giving engineering leaders full visibility into AI-assisted code changes with provenance and attribution built on Git principles.
+Stereos is the only platform that lets you manage provider API keys at the team level inside a single spend management OS. Get visibility into LLM API usage and costs, provision and govern keys (e.g., OpenRouter, model providers) in one place, and keep spend under control.
 
 **Website**: https://www.trystereos.com
 **App**: https://app.trystereos.com
 **Contact**: james@trystereos.com
 **GitHub**: https://github.com/StereosOrg/stereos
-**License**: Elastic License v2 (ELv2) - Source Available
+**License**: Elastic License v2 (ELv2) — Source Available
 
 ## Product
 
 ### What Stereos Does
 
-Stereos provides LLM usage attribution for engineering teams. It answers the questions: Who changed what? What LLM tool did they use? How is AI impacting our codebase?
+Stereos provides two core capabilities:
+
+1. **LLM spend management** — Meter, visualize, and report on LLM API usage and spend across your organization. See where money is going and who is using what.
+2. **Managed key provisioning** — Create, rotate, and govern provider API keys (e.g., OpenRouter) at the team level. One source of truth for keys and policies.
 
 ### Core Features
 
-1. **Deep Drilldowns**
-   - See changes in real-time with file-level diffs
-   - Understand who changed what and what LLM tool they used
-   - Full provenance tracking for LLM-assisted contributions
+1. **Spend visibility**
+   - Usage analytics and reports
+   - Deep drilldowns into key-level and team-level spend
+   - CFO-friendly reporting and ledger export (e.g., JSON)
 
-2. **Git-Centric Model**
-   - Built on Git principles: commit attribution, diffs, and provenance
-   - Fits into existing development workflows
-   - No learning curve for developers
+2. **Managed keys**
+   - Centralized key creation and lifecycle
+   - Team-level assignment and governance
+   - Integration with major LLM API providers
 
-3. **Collaborative**
-   - Comment on changes and share insights
-   - Collaborate across teams on LLM usage patterns
-   - Org-wide visibility into AI adoption
+3. **Single spend OS**
+   - One platform for both spend visibility and key management
+   - Unlimited team members
+   - Priority support
 
-4. **Ledger Export**
-   - Export usage ledger to JSON
-   - Custom analysis and internal dashboards
-   - Compliance-ready data export
-
-5. **Deterministic Tracking**
-   - Multiple layers of trigger fallbacks
-   - Language Model Tools API integration
-   - File system watchers for reliable capture
-
-6. **IDE Agnostic**
-   - Published as a VSIX extension on VS Code Marketplace
-   - Works with your existing editor setup
-
-7. **OTEL Compliant**
+4. **OTEL compliant**
    - Built on open standards
-   - Easy integration into existing products and workflows
+   - Easy integration into your stack
 
-8. **Source Available**
+5. **Enterprise ready**
+   - SOC 2 aligned
+   - 100% serverless
+   - 24/7 support available
+
+6. **Source available**
    - Elastic License v2 (ELv2)
    - Transparency and community collaboration
 
 ## Pricing
 
-**$450/month** + $0.03 per ledger event
+- **Platform fee**: $450/month
+- **Managed key**: $75 per managed key (usage-based)
+- **Telemetry event**: $0.0025 per telemetry event (usage-based)
 
-Includes:
-- Unlimited team members
-- Usage analytics and reports
-- Priority support
-- SOC 2 alignment
-- 100% serverless architecture
-- 24/7 support
+Includes: Unlimited team members, usage analytics and reports, ledger export, priority support, SOC 2 alignment, 100% serverless architecture.
 
 **14-day free trial**: https://app.trystereos.com
 
-## Industry Solutions
-
-### SaaS
-- AI-native enablement for SaaS teams
-- Learn more: https://www.trystereos.com/industries/saas
-
-### Healthcare Technology (HealthTech)
-- HIPAA-compliant LLM usage tracking
-- Learn more: https://www.trystereos.com/industries/healthtech
-
-### Financial Technology (FinTech)
-- PCI-DSS compliant usage attribution
-- Learn more: https://www.trystereos.com/industries/fintech
-
-### Government Technology (GovTech)
-- FedRAMP-aligned LLM change management
-- Learn more: https://www.trystereos.com/government
-
-### Startups
-- LLM usage visibility from day one
-- Learn more: https://www.trystereos.com/startups
-
-## Knowledge Base
-
-### Guides
-
-**Spec-Driven Development**
-- Writing Effective Specifications: https://www.trystereos.com/guides/writing-effective-specs
-- LLM-Assisted Coding: https://www.trystereos.com/guides/llm-assisted-coding
-- Topic Hub: https://www.trystereos.com/topics/spec-driven-development
-
-**Compliance Engineering**
-- Compliance Mapping: https://www.trystereos.com/guides/compliance-mapping
-- HIPAA Implementation: https://www.trystereos.com/guides/hipaa-implementation
-- SOC 2 Implementation: https://www.trystereos.com/guides/soc2-implementation
-- GDPR Compliance: https://www.trystereos.com/guides/gdpr-compliance
-- Topic Hub: https://www.trystereos.com/topics/compliance
-
-**LLM Security**
-- Prompt Injection Defense: https://www.trystereos.com/guides/prompt-injection-defense
-- LLM Output Validation: https://www.trystereos.com/guides/llm-output-validation
-- Data Privacy with LLMs: https://www.trystereos.com/guides/data-privacy-llm
-- Top LLM Security Tools: https://www.trystereos.com/guides/top-llm-security-tools
-- Topic Hub: https://www.trystereos.com/topics/llm-security
-
-**Strategic Tooling**
-- Top Compliance Automation Tools: https://www.trystereos.com/guides/top-compliance-automation-tools
-- Top Policy Enforcement Libraries: https://www.trystereos.com/guides/top-policy-enforcement-libraries
-- Top Voice AI Providers: https://www.trystereos.com/guides/top-voice-ai-providers
-- Topic Hub: https://www.trystereos.com/topics/strategic-tooling
-
 ## Key Differentiators
 
-1. **LLM Provenance**: First tool to provide deep visibility into LLM contribution attribution at the org level
-2. **Git-Native**: Leverages familiar Git workflows — diffs, commits, and blame — for LLM tracking
-3. **Compliance Ready**: SOC 2 aligned out of the box with exportable audit trails
-4. **Developer Experience**: Zero learning curve, integrates with existing workflows via VS Code extension
-5. **Source Transparency**: Open source (ELv2) builds trust and enables community contribution
-6. **Deterministic**: Reliable capture with multiple fallback layers — no usage data lost
+1. **Spend + keys in one place**: Only platform that combines LLM spend management with team-level managed key provisioning in a single OS.
+2. **Team-level key governance**: Provision and govern API keys at the team level instead of per-developer sprawl.
+3. **Compliance ready**: SOC 2 aligned with exportable audit trails.
+4. **Source transparency**: ELv2 — open and auditable.
 
 ## Partners
 
-We're building the ecosystem for LLM usage attribution. If you're an LLM tool stakeholder interested in partnership, reach out at james@trystereos.com.
+We are building the ecosystem for LLM spend and key management. If you are an LLM provider, key broker, or platform interested in partnership, reach out at james@trystereos.com.
 
 Learn more: https://www.trystereos.com/partners
 
 ## Legal
 
 - Privacy Policy: https://www.trystereos.com/privacy
-- Data Processing Agreement: https://www.trystereos.com/dpa
+- Terms of Service: https://www.trystereos.com/terms
 
 ---
 
-Last updated: February 8, 2026
+Last updated: February 10, 2026

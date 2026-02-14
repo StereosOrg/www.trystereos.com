@@ -5,24 +5,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-
-const docLinks = [
-  { href: "/docs/telemetry", label: "Telemetry" },
-  { href: "/docs/extension", label: "Extension" },
-]
 
 export function TopNav() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const pathname = usePathname()
-  const isDocsActive = pathname.startsWith("/docs")
 
   return (
     <>
@@ -61,28 +49,6 @@ export function TopNav() {
               >
                 Partners
               </Link>
-              <DropdownMenu>
-                <DropdownMenuTrigger
-                  className={cn(
-                    "inline-flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-colors outline-none focus-visible:ring-2 focus-visible:ring-gray-400",
-                    isDocsActive
-                      ? "text-gray-900 bg-gray-100"
-                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                  )}
-                >
-                  Docs
-                  <ChevronDown className="h-4 w-4" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-44 rounded-lg border border-gray-200 shadow-md">
-                  {docLinks.map((item) => (
-                    <DropdownMenuItem key={item.href} asChild>
-                      <Link href={item.href} className="cursor-pointer">
-                        {item.label}
-                      </Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
               <Link
                 href="https://github.com/StereosOrg/stereos"
                 target="_blank"
@@ -146,22 +112,6 @@ export function TopNav() {
               >
                 Partners
               </Link>
-              <div className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
-                Docs
-              </div>
-              {docLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={cn(
-                    "px-6 py-2.5 rounded-lg text-sm font-medium transition-colors",
-                    pathname === item.href ? "bg-gray-100 text-gray-900" : "text-gray-700 hover:bg-gray-50"
-                  )}
-                >
-                  {item.label}
-                </Link>
-              ))}
               <Link
                 href="https://github.com/StereosOrg/stereos"
                 target="_blank"

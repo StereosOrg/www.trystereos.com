@@ -1,22 +1,16 @@
 import type React from "react"
 import type { Metadata } from "next"
 import Script from "next/script"
-import { Playfair_Display, Roboto } from "next/font/google"
+import { Sora } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { AnalyticsProvider } from "@/components/analytics-provider"
 import { Toaster } from "@/components/ui/toaster"
 
-const playfairDisplay = Playfair_Display({
+const sora = Sora({
   subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-})
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-roboto",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sora",
   display: "swap",
 })
 
@@ -68,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${playfairDisplay.variable} ${roboto.variable}`}>
+    <html lang="en" suppressHydrationWarning className={sora.variable}>
       <head>
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -78,7 +72,7 @@ export default function RootLayout({
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://cdn.segment.com" />
       </head>
-      <body className={`${roboto.className} antialiased min-h-screen bg-background text-foreground selection:bg-black selection:text-white`}> 
+      <body className="font-sans antialiased min-h-screen bg-background text-foreground selection:bg-black selection:text-white"> 
         <Script
           id="posthog"
           strategy="afterInteractive"
