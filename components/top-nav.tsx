@@ -22,7 +22,7 @@ export function TopNav() {
               <div className="rounded-lg border border-white/40 bg-white/30 p-1 backdrop-blur-md">
                 <Image src="/logo.png" alt="Stereos" width={48} height={48} />
               </div>
-              <span className="text-xl font-bold tracking-tight text-gray-900">STEREOS</span>
+              <span className="text-xl font-bold tracking-tight text-gray-900">Stereos</span>
             </Link>
 
             {/* Desktop nav */}
