@@ -1,44 +1,107 @@
-import Link from "next/link"
 import { TopNav } from "@/components/top-nav"
-import { Mail } from "lucide-react"
+import { DitheringShader } from "@/components/dithering-shader"
+import { ApplicationForm } from "@/components/partners/application-form"
+import { DollarSign, Megaphone, BarChart3 } from "lucide-react"
 
 export const metadata = {
-  title: "Partners | Stereos",
-  description: "Stereos partnership program",
+  title: "Partner Program | Stereos",
+  description: "Join the Stereos Partner Program. Earn commissions by referring enterprise teams.",
 }
+
+const benefits = [
+  {
+    icon: DollarSign,
+    title: "Competitive Commissions",
+    description: "Earn recurring revenue for every enterprise team you refer to Stereos.",
+  },
+  {
+    icon: Megaphone,
+    title: "Marketing Support",
+    description: "Access co-branded materials, resources, and dedicated partner support.",
+  },
+  {
+    icon: BarChart3,
+    title: "Partner Dashboard",
+    description: "Real-time tracking of referrals, conversions, and commission earnings.",
+  },
+]
 
 export default function PartnersPage() {
   return (
-    <div className="min-h-screen bg-background bg-grid-black/[0.02]">
+    <div className="min-h-screen bg-white bg-grid-black/[0.02]">
       <TopNav />
 
       <main className="pt-16">
-        <section className="min-h-screen px-6 py-16 md:py-24 flex items-center justify-center">
-          <div className="max-w-2xl mx-auto">
-            <div className="border-4 border-black bg-white p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-              <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] bg-amber-100 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-6">
-                Coming Soon
-              </span>
-              <h1 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                Partners
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                We&apos;re still working on our partnership program at the moment! If you are involved with an LLM tool in a stakeholder capacity, please send an email to{" "}
-                <Link
-                  href="mailto:james@trystereos.com"
-                  className="font-bold text-black underline decoration-2 underline-offset-4 hover:text-emerald-700 transition-colors"
+        {/* Hero Section */}
+        <section className="relative min-h-screen px-6 py-16 md:py-24 overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none">
+            <DitheringShader
+              width={1920}
+              height={1080}
+              colorBack="#ffffff"
+              colorFront="#88edc3"
+              shape="ripple"
+              type="2x2"
+              pxSize={2}
+              speed={1.2}
+              className="absolute inset-0 w-full h-full"
+              style={{ width: "100%", height: "100%", minHeight: "100vh", opacity: 0.4 }}
+            />
+          </div>
+
+          <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
+            <span className="inline-block px-3 py-1.5 bg-[#88edc3] rounded-lg text-[11px] font-semibold uppercase tracking-wider text-[#2b2e3a] mb-6">
+              Now Accepting Applications
+            </span>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-[#2b2e3a] mb-6">
+              Partner Program
+            </h1>
+
+            <p className="text-lg md:text-xl text-[#718096] max-w-2xl leading-relaxed">
+              Join the Stereos Partner Program and earn commissions by referring enterprise teams to our key management and spend OS platform.
+            </p>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="border-t border-[#E2E8F0] bg-white px-6 py-16 md:py-24">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {benefits.map((benefit) => (
+                <div
+                  key={benefit.title}
+                  className="rounded-xl bg-white border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)] p-6"
                 >
-                  james@trystereos.com
-                </Link>{" "}
-                and let&apos;s get some early conversations going.
+                  <div className="w-10 h-10 rounded-lg bg-[#88edc3]/50 flex items-center justify-center mb-4">
+                    <benefit.icon className="w-5 h-5 text-[#2b2e3a]" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#2b2e3a] mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-[#718096] text-sm leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Application Form Section */}
+        <section className="border-t border-[#E2E8F0] bg-white px-6 py-16 md:py-24">
+          <div className="max-w-5xl mx-auto">
+            <div className="max-w-2xl mx-auto text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-[#2b2e3a] mb-4">
+                Apply to become a partner
+              </h2>
+              <p className="text-[#718096] text-lg">
+                Fill out the form below and our team will review your application within 2-3 business days.
               </p>
-              <Link
-                href="mailto:james@trystereos.com"
-                className="inline-flex h-12 items-center justify-center px-6 border-4 border-black bg-primary text-black text-sm font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all"
-              >
-                <Mail className="mr-2" size={18} />
-                Get in touch
-              </Link>
+            </div>
+
+            <div className="max-w-2xl mx-auto">
+              <ApplicationForm />
             </div>
           </div>
         </section>
