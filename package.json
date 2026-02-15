@@ -80,6 +80,7 @@
     "cmdk": "1.0.4",
     "copy-webpack-plugin": "^13.0.0",
     "date-fns": "4.1.0",
+    "drizzle-orm": "^0.45.1",
     "embla-carousel-react": "8.5.1",
     "emoji-picker-react": "^4.12.3",
     "exa-js": "^1.8.8",
@@ -110,6 +111,7 @@
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.1",
     "remark-html": "^16.0.1",
+    "resend": "^6.9.2",
     "satori": "^0.15.2",
     "simple-icons": "^14.15.0",
     "sonner": "^1.7.1",
@@ -130,6 +132,7 @@
     "@types/react-dom": "^19",
     "@types/uuid": "^10.0.0",
     "@types/web-push": "^3.6.4",
+    "drizzle-kit": "^0.31.9",
     "postcss": "^8",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
