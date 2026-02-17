@@ -110,9 +110,14 @@ export default async function FreeTrialPage({
             </p>
 
             {partner && (
-              <p className="text-lg md:text-xl font-semibold text-[#2b2e3a] mb-10">
-                You&apos;re getting $2400 in credits
-              </p>
+              <div className="mb-10 text-center">
+                <p className="text-lg md:text-xl font-semibold text-[#2b2e3a]">
+                  You&apos;re getting three months of usage waived
+                </p>
+                <p className="text-xs text-[#718096] mt-1 italic">
+                  *Offer dependant upon annual commitment.
+                </p>
+              </div>
             )}
 
             <Link href="https://app.trystereos.com/">

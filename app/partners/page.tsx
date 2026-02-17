@@ -86,6 +86,21 @@ export default function PartnersPage() {
           </div>
         </section>
 
+        {/* Explainer Video */}
+        <section className="border-t border-[#E2E8F0] bg-white px-6 py-16 md:py-24">
+          <div className="max-w-3xl mx-auto">
+            <video
+              className="w-full rounded-xl shadow-[0_4px_10px_rgba(0,0,0,0.05)] border border-[#E2E8F0]"
+              controls
+              playsInline
+              preload="metadata"
+            >
+              <source src="/partner-explainer.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </section>
+
         {/* Application Form Section */}
         <section className="border-t border-[#E2E8F0] bg-white px-6 py-16 md:py-24">
           <div className="max-w-5xl mx-auto">
