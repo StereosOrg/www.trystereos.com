@@ -13,8 +13,11 @@ import {
   Heart,
   ArrowRight,
   Github,
-  GitBranch
+  GitBranch,
+  KeyIcon,
+  Calendar
 } from "lucide-react"
+import { LockClosedIcon } from "@radix-ui/react-icons"
 
 export default function Home() {
   return (
@@ -42,12 +45,12 @@ export default function Home() {
           <div className="relative z-10 max-w-5xl mx-auto">
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2b2e3a] leading-tight mb-6">
-              Enterprise Key Management and Spend OS
+              Enterprise AI Gateway for Centralized Team Inference
             </h1>
 
             {/* Subheadline */}
             <p className="text-base md:text-lg text-[#718096] max-w-2xl mb-10">
-             Stereos is the only platform that allows you to manage provider keys at the team level within a single spend management OS.
+             Stereos allows you to enable your teams with a private AI gateway with virtual key management, data loss prevention policies, and spend management. 
             </p>
 
             {/* CTAs */}
@@ -61,20 +64,23 @@ export default function Home() {
               <div className="md:col-span-2 md:row-span-3 relative overflow-hidden rounded-xl bg-white border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)] p-8">
                 <div className="relative z-10">
                   <span className="inline-block px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-[#2b2e3a] bg-[#88edc3] rounded-lg mb-4">
-                    Best-in-Class
+                    Enterprise AI Management
                   </span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2b2e3a] mb-4">
-                    Deep Drilldowns
+                    Soveriegn LLM Gateway
                   </h3>
                   <p className="text-base text-[#718096] max-w-md mb-6">
-                    Get deep insights at the key level. Understand who is using what keys, and how much is being spent. Provision keys and revoke access as needed.
+                    Reduce shadow AI usage, protect data, and enable safe LLM usage.
                   </p>
 
-                  {/* Diff Screenshot */}
+                  {/* Explainer Video */}
                   <div className="rounded-lg overflow-hidden border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)]">
-                    <img
-                      src="/test-key.png"
-                      alt="Stereos file-level diff view showing LLM provenance attribution"
+                    <video
+                      src="/stereos-explainer.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
                       className="w-full h-auto"
                     />
                   </div>
@@ -96,22 +102,22 @@ export default function Home() {
               {/* Small Card - OTEL Compliant */}
               <div className="rounded-xl bg-white border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)] p-6">
                 <div className="w-10 h-10 rounded-lg bg-[#88edc3]/50 flex items-center justify-center mb-3">
-                  <Code2 className="w-5 h-5 text-[#2b2e3a]" />
+                  <LockClosedIcon className="w-5 h-5 text-[#2b2e3a]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">OTEL Compliant</h3>
+                <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">No Shared Infrastructure</h3>
                 <p className="text-[#718096] text-sm">
-                  Built on open standards. Easy to integrate into your products.
+                  Each gateway is provisioned as a self contained environment scoped to your org. 
                 </p>
               </div>
 
               {/* Small Card - CFO-friendly */}
               <div className="rounded-xl bg-white border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)] p-6">
                 <div className="w-10 h-10 rounded-lg bg-[#88edc3]/50 flex items-center justify-center mb-3">
-                  <FileCode2 className="w-5 h-5 text-[#2b2e3a]" />
+                  <Globe className="w-5 h-5 text-[#2b2e3a]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">CFO-friendly</h3>
+                <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">OTEL-native</h3>
                 <p className="text-[#718096] text-sm">
-                  CFO-friendly reporting and insights. Export your spend data to your favorite tools.
+                  All key gateway events report back to the dashboard as OTEL spans, and you can ingest from other tools
                 </p>
               </div>
             </div>
@@ -122,10 +128,10 @@ export default function Home() {
         <section className="px-6 py-20 border-t border-[#E2E8F0] bg-white">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[#2b2e3a] mb-4">
-              Stop letting your LLM spend be a black box. See where your money is being applied.
+              Nip shadow AI usage in the 🌹. Provision a shared gateway for your organization.
             </h2>
             <p className="text-base md:text-lg text-[#718096] mb-12 max-w-2xl">
-              Get granular insights into your LLM spend and provision keys with custom guardrails and spend policies. Enable your team to use the tools they need to get the job done.
+              Stop choosing between throwing the baby out with the bathwater (banning AI use), and having to implement your own solution on traditional gateway providers
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -143,22 +149,22 @@ export default function Home() {
               {/* Feature 2 */}
               <div className="rounded-xl bg-white border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)] p-6">
                 <div className="w-10 h-10 rounded-lg bg-[#88edc3]/50 flex items-center justify-center mb-4">
-                  <Code2 className="w-5 h-5 text-[#2b2e3a]" />
+                  <img src={"https://assets.streamlinehq.com/image/private/w_240,h_240,ar_1/f_auto/v1/icons/technology/openai_1-moa3pqsiii7l4dkheifi8.png/openai_1-gv7rd0u7lcncyfalyjodt.png?_a=DATAiZAAZAA0"} className="w-5 h-5 text-[#2b2e3a]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">Cross-functional</h3>
+                <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">OpenAI Compliant</h3>
                 <p className="text-[#718096] text-sm">
-                  Manage keys for multiple teams from a single source of truth.
+                  Our proxy endpoint is fully OpenAI compliant, so you can use it with nearly any tool or IDE  
                 </p>
               </div>
 
               {/* Feature 3 */}
               <div className="rounded-xl bg-white border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)] p-6">
                 <div className="w-10 h-10 rounded-lg bg-[#88edc3]/50 flex items-center justify-center mb-4">
-                  <GitBranch className="w-5 h-5 text-[#2b2e3a]" />
+                  <KeyIcon className="w-5 h-5 text-[#2b2e3a]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">CFO-friendly</h3>
+                <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">Virtual Keys</h3>
                 <p className="text-[#718096] text-sm">
-                  CFO-friendly reporting and insights. Export your spend data to your favorite tools.
+                  Provision keys scoped to users and teams with spend controls that we enforce at the proxy level. 
                 </p>
               </div>
 
@@ -205,7 +211,7 @@ export default function Home() {
               Pricing Commitments
             </h2>
             <p className="text-base md:text-lg text-[#718096] mb-12 max-w-2xl">
-              Our pricing is simple and transparent. You only pay for what you use — $450/mo platform fee plus usage-based pricing for managed keys and telemetry. We also offer a 14-day free trial.
+              Our pricing is simple and transparent. You only pay for what you use — $2400/mo platform fee plus usage-based pricing for managed keys and telemetry. We also offer a 14-day free trial.
             </p>
             <Pricing />
           </div>
@@ -238,7 +244,7 @@ export default function Home() {
         <section className="px-6 py-20 border-t border-[#E2E8F0] bg-white">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-[#2b2e3a] mb-4">
-              Ready to create a ledger?
+              Ready to deploy a gateway?
             </h2>
             <p className="text-base md:text-lg text-[#718096] mb-8">
               Create an account in seconds.
@@ -250,9 +256,9 @@ export default function Home() {
                 size="lg"
                 className="rounded-lg bg-[#2b2e3a] text-white font-medium shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:bg-[#1a1c24] transition-colors h-12 px-6"
               >
-                <Link href="https://github.com/StereosOrg/stereos">
-                  View the repo
-                  <Github className="ml-2" size={18} />
+                <Link href="https://cal.com/jbohrman/45-min-meeting">
+                  Schedule a demo
+                  <Calendar className="ml-2" size={18} />
                 </Link>
               </Button>
               <Button

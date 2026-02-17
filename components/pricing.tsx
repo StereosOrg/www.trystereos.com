@@ -3,7 +3,7 @@ import { PricingCtaButton } from "@/components/pricing-cta-button"
 
 const features = [
   "Unlimited team members",
-  "Deep drilldown diffs",
+  "No shared infrastructure",
   "Usage analytics & reports",
   "Ledger export (JSON)",
   "Priority support",
@@ -15,7 +15,7 @@ const billableEvents = [
     event: "platform_fee",
     label: "Platform access",
     per: "Per month",
-    price: "$450",
+    price: "$2400",
   },
   {
     event: "managed_key",
@@ -43,7 +43,7 @@ export function Pricing() {
             </span>
             <h3 className="text-xl font-bold text-[#2b2e3a] mb-1">Pay as you go</h3>
             <p className="text-sm text-[#718096] mb-6">
-              $450/month platform fee plus usage-based pricing for managed keys and telemetry.
+              $2400/month platform fee plus usage-based pricing for managed keys and telemetry.
             </p>
 
             <div className="rounded-lg bg-white shadow-[0_4px_10px_rgba(0,0,0,0.05)] border border-[#E2E8F0] overflow-hidden">

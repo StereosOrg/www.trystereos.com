@@ -111,7 +111,7 @@ export default async function FreeTrialPage({
 
             {partner && (
               <p className="text-lg md:text-xl font-semibold text-[#2b2e3a] mb-10">
-                You&apos;re getting $450 in credits
+                You&apos;re getting $2400 in credits
               </p>
             )}
 

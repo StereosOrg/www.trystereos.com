@@ -53,7 +53,7 @@ Stereos provides two core capabilities:
 
 ## Pricing
 
-- **Platform fee**: $450/month
+- **Platform fee**: $4524000/month
 - **Managed key**: $75 per managed key (usage-based)
 - **Telemetry event**: $0.0025 per telemetry event (usage-based)
 
