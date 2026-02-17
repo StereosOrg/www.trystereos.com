@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { TopNav } from "@/components/top-nav"
 import { Pricing } from "@/components/pricing"
+import { HeroCtaButton } from "@/components/hero-cta-button"
 import { DitheringShader } from "@/components/dithering-shader"
 import {
   Sparkles,
@@ -51,16 +52,7 @@ export default function Home() {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 mb-16">
-              <Button
-                asChild
-                size="lg"
-                className="rounded-lg bg-[#2b2e3a] text-white font-medium shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:bg-[#1a1c24] transition-colors h-12 px-6"
-              >
-                <Link href="https://app.trystereos.com/">
-                  Start a 14-day free trial
-                  <ArrowRight className="ml-2" size={18} />
-                </Link>
-              </Button>
+              <HeroCtaButton />
             </div>
 
             {/* Bento Grid */}
@@ -284,6 +276,7 @@ export default function Home() {
               <div>
                 <h4 className="font-bold text-[#2b2e3a] mb-4">Resources</h4>
                 <ul className="space-y-2 text-[#718096] text-sm">
+                  <li><Link href="/partners" className="hover:text-[#2b2e3a] transition-colors">Partner Program</Link></li>
                   <li><Link href="/" className="hover:text-[#2b2e3a] transition-colors">Guides</Link></li>
                 </ul>
               </div>

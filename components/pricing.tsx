@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { ArrowRight, CheckIcon } from "lucide-react"
+import { CheckIcon } from "lucide-react"
+import { PricingCtaButton } from "@/components/pricing-cta-button"
 
 const features = [
   "Unlimited team members",
@@ -74,13 +74,7 @@ export function Pricing() {
             </div>
           </div>
 
-          <Link
-            href="https://app.trystereos.com/"
-            className="inline-flex w-full h-12 items-center justify-center rounded-lg bg-[#2b2e3a] text-white text-sm font-medium shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:bg-[#1a1c24] transition-colors"
-          >
-            Start a 14-day free trial
-            <ArrowRight className="ml-2" size={16} />
-          </Link>
+          <PricingCtaButton />
         </div>
 
         {/* Right — What's included */}

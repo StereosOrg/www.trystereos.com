@@ -62,11 +62,9 @@ export default function PartnersPage() {
               Join the Stereos Partner Program and earn commissions by referring enterprise teams to our key management and spend OS platform.
             </p>
           </div>
-        </section>
 
-        {/* Benefits Section */}
-        <section className="border-t border-[#E2E8F0] bg-white px-6 py-16 md:py-24">
-          <div className="max-w-5xl mx-auto">
+          {/* Benefits */}
+          <div className="relative z-10 max-w-5xl mx-auto mt-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {benefits.map((benefit) => (
                 <div

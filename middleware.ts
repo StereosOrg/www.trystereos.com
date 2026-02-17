@@ -17,6 +17,18 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 301)
   }
 
+  // Set referral cookie when visiting /free-trial with a partner code
+  if (url.pathname === '/free-trial' && url.searchParams.get('code')) {
+    const response = NextResponse.next()
+    response.cookies.set('stereos_ref', url.searchParams.get('code')!, {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'lax',
+      maxAge: 60 * 60 * 24 * 30, // 30 days
+    })
+    return response
+  }
+
   return NextResponse.next()
 }
 

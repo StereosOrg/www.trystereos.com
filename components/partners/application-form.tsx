@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { toast } from "sonner"
+import { usePostHog } from "posthog-js/react"
 
 import {
   Form,
@@ -26,24 +27,54 @@ import {
 } from "@/components/ui/select"
 
 const partnerTypes = [
-  "Affiliate",
-  "Reseller",
-  "Integration Partner",
-  "Strategic Partner",
+  "Individual",
+  "Organization",
+  "Government Agency",
 ] as const
+
+const industries = [
+  "SaaS / Software",
+  "Education",
+  "Healthcare",
+  "Finance / Fintech",
+  "E-Commerce / Retail",
+  "Media / Entertainment",
+  "Government",
+  "Non-Profit",
+  "Consulting / Agency",
+  "Other",
+] as const
+
+const audienceSizes = [
+  "1 - 100",
+  "101 - 1,000",
+  "1,001 - 10,000",
+  "10,001 - 100,000",
+  "100,000+",
+] as const
+
+const audienceSizeToNumber: Record<string, number> = {
+  "1 - 100": 100,
+  "101 - 1,000": 1000,
+  "1,001 - 10,000": 10000,
+  "10,001 - 100,000": 100000,
+  "100,000+": 100001,
+}
 
 const applicationSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   company: z.string().min(1, "Company / Organization is required"),
-  industry: z.string().min(1, "Industry is required"),
-  audienceSize: z
-    .union([z.coerce.number().int().positive(), z.literal("")])
-    .optional()
-    .transform((val) => (val === "" ? undefined : val)),
+  industry: z.enum(industries, {
+    message: "Please select an industry",
+  }),
+  audienceSize: z.enum(audienceSizes, {
+    message: "Please select an audience size",
+  }).optional().transform((val) => (val ? audienceSizeToNumber[val] : undefined)),
   partnerType: z.enum(partnerTypes, {
     message: "Please select a partner type",
   }),
+  imageUrl: z.string().url("Please provide a valid image URL"),
   message: z.string().max(1000, "Message must be 1000 characters or less").optional(),
 })
 
@@ -51,6 +82,7 @@ type ApplicationFormValues = z.infer<typeof applicationSchema>
 
 export function ApplicationForm() {
   const router = useRouter()
+  const posthog = usePostHog()
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const form = useForm<ApplicationFormValues>({
@@ -59,9 +91,10 @@ export function ApplicationForm() {
       fullName: "",
       email: "",
       company: "",
-      industry: "",
+      industry: undefined,
       audienceSize: undefined,
       partnerType: undefined,
+      imageUrl: "",
       message: "",
     },
   })
@@ -81,6 +114,7 @@ export function ApplicationForm() {
       }
 
       const response = await res.json()
+      posthog.capture("Partner Application Submitted")
       router.push(response.redirect)
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Something went wrong. Please try again.")
@@ -151,9 +185,23 @@ export function ApplicationForm() {
                   <FormLabel className="text-sm font-medium text-[#2b2e3a]">
                     Industry
                   </FormLabel>
-                  <FormControl>
-                    <Input placeholder="SaaS, Education, etc." {...field} />
-                  </FormControl>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select an industry" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {industries.map((industry) => (
+                        <SelectItem key={industry} value={industry}>
+                          {industry}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                   <FormMessage />
                 </FormItem>
               )}
@@ -169,17 +217,23 @@ export function ApplicationForm() {
                 <FormLabel className="text-sm font-medium text-[#2b2e3a]">
                   Audience Size
                 </FormLabel>
-                <FormControl>
-                  <Input
-                    type="number"
-                    placeholder="e.g. 10000"
-                    {...field}
-                    value={field.value ?? ""}
-                    onChange={(e) =>
-                      field.onChange(e.target.value === "" ? "" : e.target.value)
-                    }
-                  />
-                </FormControl>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select audience size" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {audienceSizes.map((size) => (
+                      <SelectItem key={size} value={size}>
+                        {size}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
                 <FormMessage />
               </FormItem>
             )}
@@ -210,6 +264,22 @@ export function ApplicationForm() {
                     ))}
                   </SelectContent>
                 </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="imageUrl"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-sm font-medium text-[#2b2e3a]">
+                  Profile Image URL
+                </FormLabel>
+                <FormControl>
+                  <Input type="url" placeholder="https://example.com/your-photo.jpg" {...field} />
+                </FormControl>
                 <FormMessage />
               </FormItem>
             )}

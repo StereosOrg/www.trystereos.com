@@ -1,19 +1,18 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { nanoid } from "nanoid";
-import { auth } from "@/lib/auth";
 import { db } from "@/lib/db/drizzle";
 import { partners } from "@/lib/db/partner-schema";
-import { sql } from "@/lib/db/postgres";
 import { sendApplicationReceived } from "@/lib/email";
 
 const applySchema = z.object({
-  name: z.string().min(2).max(100),
+  fullName: z.string().min(2).max(100),
   email: z.string().email(),
   company: z.string().min(1).max(200),
   industry: z.string().min(1).max(100),
-  audience_size: z.number().int().positive().optional(),
-  type: z.enum(["affiliate", "reseller", "integration", "strategic"]),
+  audienceSize: z.union([z.number().int().positive(), z.literal("")]).optional().transform((val) => (val === "" ? undefined : val)),
+  partnerType: z.enum(["Individual", "Organization", "Government Agency"]),
+  imageUrl: z.string().url("Please provide a valid image URL"),
   message: z.string().max(1000).optional(),
 });
 
@@ -21,23 +20,6 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const data = applySchema.parse(body);
-
-    // Generate a temporary password for the BetterAuth user
-    const tempPassword = nanoid(16);
-
-    // Create a BetterAuth user via the server-side API
-    const signUpResult = await auth.api.signUpEmail({
-      body: {
-        name: data.name,
-        email: data.email,
-        password: tempPassword,
-      },
-    });
-
-    const userId = signUpResult.user.id;
-
-    // Set user role to 'partner'
-    await sql`UPDATE "user" SET role = 'partner' WHERE id = ${userId}`;
 
     // Generate partner code: first 6 alphanumeric chars of company (uppercased) + "-" + random 4 chars
     const companyPrefix = data.company
@@ -48,21 +30,23 @@ export async function POST(request: Request) {
 
     // Insert partner record
     await db.insert(partners).values({
-      name: data.name,
+      name: data.company,
       email: data.email,
       partner_code: partnerCode,
       industry: data.industry,
-      audience_size: data.audience_size,
-      type: data.type,
-      user_id: userId,
+      audience_size: data.audienceSize,
+      type: data.partnerType,
+      image_url: data.imageUrl,
     });
 
-    // Send confirmation email
-    await sendApplicationReceived(data.email, data.name);
+    // Send confirmation email (non-critical, don't block on failure)
+    sendApplicationReceived(data.email, data.fullName).catch((err) =>
+      console.error("Failed to send confirmation email:", err)
+    );
 
     return NextResponse.json({
       success: true,
-      redirect: "/partners/pending",
+      redirect: "/partners/thanks",
     });
   } catch (error) {
     if (error instanceof z.ZodError) {
@@ -72,7 +56,7 @@ export async function POST(request: Request) {
       );
     }
 
-    console.error("Partner application error:", error);
+    console.error("Partner application error:", error instanceof Error ? { message: error.message, stack: error.stack, name: error.name } : error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

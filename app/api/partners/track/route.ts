@@ -6,18 +6,11 @@ import { partners, referrals } from "@/lib/db/partner-schema";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { partner_code, type } = body;
+    const { partner_code, customer_id } = body;
 
-    if (!partner_code || !type) {
+    if (!partner_code || !customer_id) {
       return NextResponse.json(
-        { error: "partner_code and type are required" },
-        { status: 400 }
-      );
-    }
-
-    if (!["click", "signup"].includes(type)) {
-      return NextResponse.json(
-        { error: "type must be 'click' or 'signup'" },
+        { error: "partner_code and customer_id are required" },
         { status: 400 }
       );
     }
@@ -40,7 +33,7 @@ export async function POST(request: Request) {
     // Insert referral record
     await db.insert(referrals).values({
       partner_id: partner.id,
-      referral_type: type,
+      customer_id,
     });
 
     return NextResponse.json({ success: true });

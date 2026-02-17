@@ -15,5 +15,5 @@ function getPool() {
 
 export const db = drizzle({
   client: getPool(),
-  schema: partnerSchema,
+  schema: { ...partnerSchema },
 });

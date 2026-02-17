@@ -23,6 +23,7 @@ const footerLinkSections = [
   {
     title: "Resources",
     links: [
+      { label: "Partner Program", href: "/partners" },
       { label: "Topic Hubs", href: "/topics" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Data Processing Agreement", href: "/dpa" },
