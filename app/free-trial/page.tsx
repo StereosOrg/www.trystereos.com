@@ -8,9 +8,25 @@ import Image from "next/image"
 import { KeyRound, BarChart3, FileText, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-export const metadata = {
-  title: "Start Your Free Trial | Stereos",
-  description: "Start your 14-day free trial of Stereos. Enterprise key management and spend tracking for your team.",
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ partner?: string; code?: string }>
+}) {
+  const params = await searchParams
+  const partner = await getPartner(params.code)
+
+  if (partner) {
+    return {
+      title: `Stereos | Free trial offer from ${partner.name}`,
+      description: `Start your 14-day free trial of Stereos, referred by ${partner.name}. Enterprise key management and spend tracking for your team.`,
+    }
+  }
+
+  return {
+    title: "Start Your Free Trial | Stereos",
+    description: "Start your 14-day free trial of Stereos. Enterprise key management and spend tracking for your team.",
+  }
 }
 
 const benefits = [
