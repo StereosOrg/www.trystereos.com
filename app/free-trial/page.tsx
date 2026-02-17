@@ -19,21 +19,21 @@ export async function generateMetadata({
   if (partner) {
     return {
       title: `Stereos | Free trial offer from ${partner.name}`,
-      description: `Start your 14-day free trial of Stereos, referred by ${partner.name}. Enterprise key management and spend tracking for your team.`,
+      description: `Start your 14-day free trial of Stereos, referred by ${partner.name}. Enterprise AI Gateway for Centralized Team Inference`,
     }
   }
 
   return {
     title: "Start Your Free Trial | Stereos",
-    description: "Start your 14-day free trial of Stereos. Enterprise key management and spend tracking for your team.",
+    description: "Start your 14-day free trial of Stereos. Enterprise AI Gateway for Centralized Team Inference.",
   }
 }
 
 const benefits = [
   {
     icon: KeyRound,
-    title: "Key Management at Team Level",
-    description: "Manage API keys across your entire organization with granular team-level controls and permissions.",
+    title: "Soveriegn LLM Gateway",
+    description: "Reduce shadow AI usage, protect data, and enable safe LLM usage.",
   },
   {
     icon: BarChart3,
@@ -42,8 +42,8 @@ const benefits = [
   },
   {
     icon: FileText,
-    title: "CFO-Friendly Reporting",
-    description: "Generate clean, exportable reports that finance teams actually understand. Budget forecasting included.",
+    title: "No Shared Infrastructure",
+    description: "Each gateway is provisioned as a self contained environment scoped to your org.",
   },
 ]
 
