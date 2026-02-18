@@ -3,7 +3,33 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Compliance | Stereos Trust Center",
-  description: "Stereos SOC 2 alignment, CAIQ status, and compliance posture.",
+  description: "Transparent view of our SOC 2 Type I alignment journey, CSA CAIQ v4 completion, and vendor compliance controls. See how Stereos meets enterprise security standards.",
+  keywords: ["SOC 2", "compliance", "security audit", "CAIQ", "CSA", "trust service criteria", "security controls"],
+  openGraph: {
+    title: "Compliance | Stereos Trust Center",
+    description: "Transparent view of our SOC 2 Type I alignment journey, CSA CAIQ v4 completion, and vendor compliance controls.",
+    url: "https://www.trystereos.com/trust/compliance",
+    siteName: "Stereos",
+    images: [
+      {
+        url: "https://www.trystereos.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Stereos Compliance & SOC 2 Alignment",
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Compliance | Stereos Trust Center",
+    description: "Transparent view of our SOC 2 Type I alignment journey, CSA CAIQ v4 completion, and vendor compliance controls.",
+    images: ["https://www.trystereos.com/og-image.png"]
+  },
+  alternates: {
+    canonical: "/trust/compliance"
+  }
 }
 
 const controlDomains = [

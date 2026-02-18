@@ -4,7 +4,33 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Trust Center | Stereos",
-  description: "Stereos security posture, compliance alignment, and data handling practices.",
+  description: "Your trust is our foundation. Explore Stereos' security-first infrastructure, SOC 2 alignment, data protection practices, and commitment to transparent security. See why enterprise teams trust us with their LLM operations.",
+  keywords: ["security", "compliance", "SOC 2", "data protection", "encryption", "zero data retention", "trust center"],
+  openGraph: {
+    title: "Trust Center | Stereos",
+    description: "Your trust is our foundation. Explore our security-first infrastructure, SOC 2 alignment, and commitment to transparent security.",
+    url: "https://www.trystereos.com/trust",
+    siteName: "Stereos",
+    images: [
+      {
+        url: "https://www.trystereos.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Stereos Trust Center - Security & Compliance",
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Trust Center | Stereos",
+    description: "Your trust is our foundation. Explore our security-first infrastructure, SOC 2 alignment, and commitment to transparent security.",
+    images: ["https://www.trystereos.com/og-image.png"]
+  },
+  alternates: {
+    canonical: "/trust"
+  }
 }
 
 const statusCards = [

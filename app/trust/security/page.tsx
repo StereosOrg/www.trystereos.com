@@ -3,7 +3,33 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Security Controls | Stereos Trust Center",
-  description: "Stereos access control, MFA, RBAC, secret management, monitoring, and incident response.",
+  description: "Enterprise-grade security controls protecting your data: MFA enforcement, RBAC, encrypted secrets, real-time monitoring, and comprehensive incident response. See how we safeguard your LLM operations.",
+  keywords: ["security controls", "MFA", "RBAC", "encryption", "access control", "incident response", "monitoring", "secrets management"],
+  openGraph: {
+    title: "Security Controls | Stereos Trust Center",
+    description: "Enterprise-grade security controls protecting your data: MFA enforcement, RBAC, encrypted secrets, and comprehensive incident response.",
+    url: "https://www.trystereos.com/trust/security",
+    siteName: "Stereos",
+    images: [
+      {
+        url: "https://www.trystereos.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Stereos Security Controls",
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Security Controls | Stereos Trust Center",
+    description: "Enterprise-grade security controls protecting your data: MFA enforcement, RBAC, encrypted secrets, and comprehensive incident response.",
+    images: ["https://www.trystereos.com/og-image.png"]
+  },
+  alternates: {
+    canonical: "/trust/security"
+  }
 }
 
 const controls = [

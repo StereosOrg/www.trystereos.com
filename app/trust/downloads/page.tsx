@@ -4,7 +4,33 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Security Downloads | Stereos Trust Center",
-  description: "Download Stereos security and compliance documentation including our Security Overview PDF.",
+  description: "Download our comprehensive Security & Compliance Overview. Get detailed documentation on architecture, controls, data flows, and our SOC 2 roadmap. Available under NDA.",
+  keywords: ["security documentation", "compliance downloads", "security overview", "architecture diagram", "security questionnaire"],
+  openGraph: {
+    title: "Security Downloads | Stereos Trust Center",
+    description: "Download our comprehensive Security & Compliance Overview. Get detailed documentation on architecture, controls, and our SOC 2 roadmap.",
+    url: "https://www.trystereos.com/trust/downloads",
+    siteName: "Stereos",
+    images: [
+      {
+        url: "https://www.trystereos.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Stereos Security Documentation Downloads",
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Security Downloads | Stereos Trust Center",
+    description: "Download our comprehensive Security & Compliance Overview. Get detailed documentation on architecture, controls, and our SOC 2 roadmap.",
+    images: ["https://www.trystereos.com/og-image.png"]
+  },
+  alternates: {
+    canonical: "/trust/downloads"
+  }
 }
 
 const included = [

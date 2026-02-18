@@ -2,7 +2,33 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Subprocessors | Stereos Trust Center",
-  description: "Third-party vendors and subprocessors used by Stereos.",
+  description: "Complete transparency on our vendor ecosystem. See all third-party subprocessors, their security certifications (SOC 2 Type II), and the data they process on our behalf.",
+  keywords: ["subprocessors", "third-party vendors", "vendor management", "SOC 2 Type II", "data processors", "vendor security"],
+  openGraph: {
+    title: "Subprocessors | Stereos Trust Center",
+    description: "Complete transparency on our vendor ecosystem. See all third-party subprocessors, their security certifications, and the data they process.",
+    url: "https://www.trystereos.com/trust/subprocessors",
+    siteName: "Stereos",
+    images: [
+      {
+        url: "https://www.trystereos.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Stereos Subprocessor List",
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Subprocessors | Stereos Trust Center",
+    description: "Complete transparency on our vendor ecosystem. See all third-party subprocessors, their security certifications, and the data they process.",
+    images: ["https://www.trystereos.com/og-image.png"]
+  },
+  alternates: {
+    canonical: "/trust/subprocessors"
+  }
 }
 
 const subprocessors = [

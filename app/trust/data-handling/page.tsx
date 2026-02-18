@@ -3,7 +3,33 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Data Handling | Stereos Trust Center",
-  description: "What data Stereos processes, what it does not store, and how it is protected.",
+  description: "Data minimization by design. Zero Data Retention on all LLM prompts by default. AES-256 encryption at rest, TLS 1.2+ in transit. Learn exactly what we process and protect.",
+  keywords: ["data handling", "zero data retention", "ZDR", "encryption", "data protection", "privacy", "data minimization", "TLS"],
+  openGraph: {
+    title: "Data Handling | Stereos Trust Center",
+    description: "Data minimization by design. Zero Data Retention on all LLM prompts by default. AES-256 encryption at rest, TLS 1.2+ in transit.",
+    url: "https://www.trystereos.com/trust/data-handling",
+    siteName: "Stereos",
+    images: [
+      {
+        url: "https://www.trystereos.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Stereos Data Handling & Privacy",
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Data Handling | Stereos Trust Center",
+    description: "Data minimization by design. Zero Data Retention on all LLM prompts by default. AES-256 encryption at rest, TLS 1.2+ in transit.",
+    images: ["https://www.trystereos.com/og-image.png"]
+  },
+  alternates: {
+    canonical: "/trust/data-handling"
+  }
 }
 
 const dataProcessed = [
