@@ -20,7 +20,7 @@ export function TrustNav() {
   return (
     <>
       {/* Desktop sidebar */}
-      <nav className="hidden md:flex flex-col gap-1 w-52 shrink-0">
+      <nav className="hidden md:flex flex-col gap-1 w-52 shrink-0" aria-label="Trust Center">
         <p className="text-[10px] font-semibold uppercase tracking-widest text-[#718096] px-3 mb-2">
           Trust Center
         </p>
@@ -45,7 +45,7 @@ export function TrustNav() {
       </nav>
 
       {/* Mobile horizontal tabs */}
-      <nav className="md:hidden flex gap-1 overflow-x-auto pb-2 mb-6 border-b border-[#E2E8F0] no-scrollbar">
+      <nav className="md:hidden flex gap-1 overflow-x-auto pb-2 mb-6 border-b border-[#E2E8F0] no-scrollbar" aria-label="Trust Center navigation">
         {navItems.map(({ label, href, icon: Icon }) => {
           const active = pathname === href
           return (
