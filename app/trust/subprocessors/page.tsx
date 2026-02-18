@@ -46,7 +46,7 @@ const subprocessors = [
     role: "Transactional email",
     dataProcessed: "Email addresses for transactional sends",
     region: "US",
-    soc2: false,
+    soc2: true,
   },
 ]
 

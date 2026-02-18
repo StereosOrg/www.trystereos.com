@@ -25,6 +25,7 @@ const footerLinkSections = [
     links: [
       { label: "Partner Program", href: "/partners" },
       { label: "Topic Hubs", href: "/topics" },
+      { label: "Trust Center", href: "/trust" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Data Processing Agreement", href: "/dpa" },
     ],
