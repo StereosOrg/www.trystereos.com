@@ -45,12 +45,12 @@ export default function Home() {
           <div className="relative z-10 max-w-5xl mx-auto">
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2b2e3a] leading-tight mb-6">
-              Enterprise AI Gateway for Centralized Team Inference
+              Zero data retention Unified AI for the pickiest security climate
             </h1>
 
             {/* Subheadline */}
             <p className="text-base md:text-lg text-[#718096] max-w-2xl mb-10">
-             Stereos allows you to enable your teams with a private AI gateway with virtual key management, data loss prevention policies, and spend management. 
+             We provision secure OpenAI compatible Unified AI gateways with ZDR-by-default and optional data-loss-prevention policies
             </p>
 
             {/* CTAs */}
@@ -67,7 +67,7 @@ export default function Home() {
                     Enterprise AI Management
                   </span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2b2e3a] mb-4">
-                    Soveriegn LLM Gateway
+                    Unified AI with no Data Retention
                   </h3>
                   <p className="text-base text-[#718096] max-w-md mb-6">
                     Reduce shadow AI usage, protect data, and enable safe LLM usage.
