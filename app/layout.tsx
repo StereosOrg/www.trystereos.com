@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Sora } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { AnalyticsProvider } from "@/components/analytics-provider"
@@ -71,6 +72,13 @@ export default function RootLayout({
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://cdp.customer.io" />
       </head>
+      <Script
+        id="rb2b"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `!function(key){if(window.reb2b)return;window.reb2b={loaded:true};var s=document.createElement("script");s.async=true;s.src="https://ddwl4m2hdecbv.cloudfront.net/b/"+key+"/"+key+".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s,document.getElementsByTagName("script")[0]);}("DNXY8HD2E2O0");`,
+        }}
+      />
       <body className="font-sans antialiased min-h-screen bg-background text-foreground selection:bg-black selection:text-white"> 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <AnalyticsProvider />
