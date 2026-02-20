@@ -7,9 +7,47 @@ import { ShieldCheck, KeyRound, Activity, Calendar } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Security blocking AI tools? | Stereos",
+  title: "Security policy blues? | Try Stereos",
   description:
-    "Loop in your security leader and let's talk about zero data retention AI in a shared Slack channel.",
+    "Loop in your security leader and get a full briefing on how Stereos handles data — zero data retention, no shared API keys, full OTEL observability. All in a shared Slack Connect channel.",
+  keywords: [
+    "AI security",
+    "CISO approved AI",
+    "zero data retention AI",
+    "enterprise AI gateway",
+    "DLP AI",
+    "Slack Connect",
+    "SOC 2 AI",
+    "LLM proxy",
+  ],
+  openGraph: {
+    title: "Security policy blues? | Try Stereos",
+    description:
+      "Add your email and your security leader's email. We'll invite you both to a shared Slack Connect channel and send a full briefing on how Stereos handles data.",
+    url: "https://www.trystereos.com/slack-connect",
+    siteName: "Stereos",
+    images: [
+      {
+        url: "https://www.trystereos.com/og-slack-connect.png",
+        width: 1512,
+        height: 788,
+        alt: "Stereos Slack Connect — No more security policy blues",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Security policy blues? | Try Stereos",
+    description:
+      "Loop in your security leader via Slack Connect. Zero data retention, no shared API keys, full observability.",
+    images: ["https://www.trystereos.com/og-slack-connect.png"],
+    site: "@trystereos",
+  },
+  alternates: {
+    canonical: "https://www.trystereos.com/slack-connect",
+  },
 }
 
 export default function SlackConnectPage() {
