@@ -72,6 +72,7 @@ export default function RootLayout({
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://cdp.customer.io" />
       </head>
+      <Script src="https://leadpipe.aws53.cloud/p/bf0118a9-f83b-4f28-aaa7-3e39f3726e04.js" strategy="afterInteractive" />
       <body className="font-sans antialiased min-h-screen bg-background text-foreground selection:bg-black selection:text-white"> 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <AnalyticsProvider />
