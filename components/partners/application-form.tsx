@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { toast } from "sonner"
-import { usePostHog } from "posthog-js/react"
 
 import {
   Form,
@@ -82,7 +81,6 @@ type ApplicationFormValues = z.infer<typeof applicationSchema>
 
 export function ApplicationForm() {
   const router = useRouter()
-  const posthog = usePostHog()
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const form = useForm<ApplicationFormValues>({
@@ -114,7 +112,7 @@ export function ApplicationForm() {
       }
 
       const response = await res.json()
-      posthog.capture("Partner Application Submitted")
+      ;(window as any).cioanalytics?.track("Partner Application Submitted")
       router.push(response.redirect)
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Something went wrong. Please try again.")

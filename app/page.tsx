@@ -280,18 +280,11 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
               <div>
-                <h4 className="font-bold text-[#2b2e3a] mb-4">Resources</h4>
+                <h4 className="font-bold text-[#2b2e3a] mb-4">Product</h4>
                 <ul className="space-y-2 text-[#718096] text-sm">
-                  <li><Link href="/partners" className="hover:text-[#2b2e3a] transition-colors">Partner Program</Link></li>
-                  <li><Link href="/" className="hover:text-[#2b2e3a] transition-colors">Guides</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold text-[#2b2e3a] mb-4">Community</h4>
-                <ul className="space-y-2 text-[#718096] text-sm">
-                  <li><Link href="https://github.com/StereosOrg/stereos" target="_blank" className="hover:text-[#2b2e3a] transition-colors">GitHub</Link></li>
-                  <li><Link href="https://github.com/StereosOrg/stereos/issues" target="_blank" className="hover:text-[#2b2e3a] transition-colors">Issues</Link></li>
-                  <li><Link href="https://github.com/StereosOrg/stereos/discussions" target="_blank" className="hover:text-[#2b2e3a] transition-colors">Discussions</Link></li>
+                  <li><Link href="https://www.trystereos.com/ai-enablement" target="_blank" className="hover:text-[#2b2e3a] transition-colors">ZDR Gateway</Link></li>
+                  <li><Link href="https://www.trystereos.com/otel-relay" target="_blank" className="hover:text-[#2b2e3a] transition-colors">Telemetry Relay</Link></li>
+                  <li><Link href="https://www.trystereos.com/key-provisioning" target="_blank" className="hover:text-[#2b2e3a] transition-colors">Virtual Key Management</Link></li>
                 </ul>
               </div>
               <div>
@@ -300,6 +293,13 @@ export default function Home() {
                   <li><Link href="/privacy" className="hover:text-[#2b2e3a] transition-colors">Privacy</Link></li>
                   <li><Link href="/trust" className="hover:text-[#2b2e3a] transition-colors">Trust Center</Link></li>
                   <li><Link href="/terms" className="hover:text-[#2b2e3a] transition-colors">Terms</Link></li>
+                </ul>
+              </div>
+                <div>
+                <h4 className="font-bold text-[#2b2e3a] mb-4">Resources</h4>
+                <ul className="space-y-2 text-[#718096] text-sm">
+                  <li><Link href="/partners" className="hover:text-[#2b2e3a] transition-colors">Partner Program</Link></li>
+                  <li><Link href="/" className="hover:text-[#2b2e3a] transition-colors">Guides</Link></li>
                 </ul>
               </div>
             </div>

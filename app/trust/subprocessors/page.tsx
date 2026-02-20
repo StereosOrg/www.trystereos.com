@@ -61,9 +61,9 @@ const subprocessors = [
     soc2: true,
   },
   {
-    vendor: "PostHog",
-    role: "Product analytics",
-    dataProcessed: "Anonymous usage events, page views",
+    vendor: "Customer.io",
+    role: "Product analytics, marketing automation",
+    dataProcessed: "Usage events, page views, email addresses",
     region: "US",
     soc2: true,
   },

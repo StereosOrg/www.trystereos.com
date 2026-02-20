@@ -8,16 +8,6 @@ import { useState, FormEvent, useEffect } from "react"
 import { CheckCircle } from "lucide-react"
 import { useAnalytics } from "@/hooks/use-analytics"
 
-declare global {
-  interface Window {
-    posthog?: {
-      capture: (eventName: string, properties?: Record<string, unknown>) => void;
-      identify?: (distinctId?: string, properties?: Record<string, unknown>) => void;
-      __loaded?: boolean;
-      [key: string]: any;
-    };
-  }
-}
 
 const currentProjects = [
   {
@@ -122,13 +112,7 @@ export function HeroSection() {
 
       analytics.identify(normalizedEmail, analyticsMetadata)
       analytics.track("newsletter_signup", analyticsMetadata)
-
-      if (window.posthog) {
-        window.posthog.identify?.(normalizedEmail, analyticsMetadata)
-        window.posthog.capture("newsletter_signup", {
-          ...analyticsMetadata,
-        })
-      }
+      ;(window as any).cioanalytics?.track("newsletter_signup", analyticsMetadata)
 
       toast({
         title: "You're on the list",

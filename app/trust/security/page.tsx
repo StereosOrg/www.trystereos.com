@@ -61,7 +61,7 @@ const controls = [
     icon: FileText,
     title: "Logging & Monitoring",
     description:
-      "Application errors and anomalies are monitored via PostHog and server-side logging. Cloudflare provides edge-level request logging and anomaly detection. Alerts are configured for unusual traffic patterns, authentication failures, and error rate spikes.",
+      "Application errors and anomalies are monitored via Customer.io and server-side logging. Cloudflare provides edge-level request logging and anomaly detection. Alerts are configured for unusual traffic patterns, authentication failures, and error rate spikes.",
   },
   {
     icon: AlertTriangle,

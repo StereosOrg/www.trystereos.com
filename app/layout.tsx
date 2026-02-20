@@ -5,7 +5,6 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { AnalyticsProvider } from "@/components/analytics-provider"
 import { Toaster } from "@/components/ui/toaster"
-import { PostHogProvider } from "@/components/posthog-provider"
 
 const sora = Sora({
   subsets: ["latin"],
@@ -70,10 +69,9 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Stereos" />
         {/* Preconnect to external domains for performance */}
-        <link rel="preconnect" href="https://cdn.segment.com" />
+        <link rel="preconnect" href="https://cdp.customer.io" />
       </head>
       <body className="font-sans antialiased min-h-screen bg-background text-foreground selection:bg-black selection:text-white"> 
-        <PostHogProvider>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <AnalyticsProvider />
           <div className="relative flex min-h-screen flex-col">
@@ -83,7 +81,6 @@ export default function RootLayout({
           </div>
           <Toaster />
         </ThemeProvider>
-        </PostHogProvider>
       </body>
     </html>
   )
