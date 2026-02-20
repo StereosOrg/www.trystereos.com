@@ -123,7 +123,7 @@ export default function PrivacyPage() {
                 <section>
                   <h2 className="text-xl font-bold text-[#2b2e3a] mb-3">8. Cookies and Tracking</h2>
                   <p>
-                    We use cookies and similar tracking technologies (including analytics from Customer.io and Segment) to analyze usage patterns and improve our services. You can control cookie preferences through your browser settings.
+                    We use cookies and similar tracking technologies (including analytics from Customer.io, Segment, and Snitcher) to analyze usage patterns and improve our services. Snitcher is used to identify companies visiting our website based on IP address. You can control cookie preferences through your browser settings.
                   </p>
                 </section>
 

@@ -74,6 +74,13 @@ const subprocessors = [
     region: "US",
     soc2: true,
   },
+  {
+    vendor: "Snitcher",
+    role: "Website visitor identification",
+    dataProcessed: "IP addresses, company identity, page views",
+    region: "EU",
+    soc2: false,
+  },
 ]
 
 export default function SubprocessorsPage() {
@@ -88,7 +95,7 @@ export default function SubprocessorsPage() {
           The following third-party vendors process data on behalf of Stereos. We review vendors for
           security posture before onboarding. This list is updated when vendors are added or removed.
         </p>
-        <p className="text-xs text-[#718096] mt-2">Last updated: February 2026</p>
+        <p className="text-xs text-[#718096] mt-2">Last updated: February 20, 2026</p>
       </div>
 
       <div className="rounded-xl bg-white border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)] overflow-hidden">
