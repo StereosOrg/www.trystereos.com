@@ -15,10 +15,10 @@ export function CopyButton({ text }: { text: string }) {
   return (
     <button
       onClick={handleCopy}
-      className="absolute right-3 top-3 p-2 border-2 border-black bg-white hover:bg-gray-100 transition-colors"
+      className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-md text-[#718096] hover:text-[#2b2e3a] hover:bg-[#F7FAFC] transition-colors"
       aria-label="Copy to clipboard"
     >
-      {copied ? <Check size={14} className="text-green-600" /> : <Copy size={14} />}
+      {copied ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} />}
     </button>
   )
 }
