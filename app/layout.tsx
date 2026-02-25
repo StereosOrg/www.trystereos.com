@@ -15,15 +15,15 @@ const sora = Sora({
 })
 
 export const metadata: Metadata = {
-  title: "Stereos | LLM tool usage ledger for teams",
-  description: "Org-wide LLM usage attribution and change management",
+  title: "You don't need archaic AI usage policies to protect your data. You need Stereos.",
+  description: "Give your team the freedom to innovate with the tools they love",
   generator: 'v0.dev',
   keywords: ['change management', 'attribution', 'developer enablement', 'process management', 'observability', 'analytics', 'LLMs', 'AI'],
   authors: [{ name: 'Stereos' }],
   creator: 'Stereos',
   openGraph: {
-    title: "Stereos | LLM tool usage ledger for teams",
-    description: "Org-wide LLM usage attribution and change management",
+    title: "You don't need archaic AI usage policies to protect your data. You need Stereos.",
+    description: "Give your team the freedom to innovate with the tools they love",
     url: "https://www.trystereos.com",
     siteName: "Stereos",
     images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         url: "https://www.trystereos.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Stereos - LLM tool usage ledger for teams",
+        alt: "Private Organizational AI Gateway",
       }
     ],
     locale: "en_US",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stereos | LLM tool usage ledger for teams",
-    description: "Org-wide LLM usage attribution and change management",
+    title: "You don't need archaic AI usage policies to protect your data. You need Stereos.",
+    description: "Give your team the freedom to innovate with the tools they love",
     images: ["https://www.trystereos.com/og-image.png"]
   },
   robots: {
