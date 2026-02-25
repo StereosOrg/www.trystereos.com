@@ -69,10 +69,15 @@ export function TopNav() {
                 Partners
               </Link>
               <Link
-                href="/slack-connect"
-                className="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+                href="/blog"
+                className={cn(
+                  "px-4 py-2 rounded-lg text-sm font-medium transition-colors",
+                  pathname === "/blog" || pathname.startsWith("/blog/")
+                    ? "text-gray-900 bg-gray-100"
+                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                )}
               >
-                Security blocking AI tools? 😱
+                Blog
               </Link>
             </nav>
 
@@ -132,11 +137,16 @@ export function TopNav() {
                 Partners
               </Link>
               <Link
-                href="/slack-connect"
+                href="/blog"
                 onClick={() => setMobileOpen(false)}
-                className="px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+                className={cn(
+                  "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
+                  pathname === "/blog" || pathname.startsWith("/blog/")
+                    ? "bg-gray-100 text-gray-900"
+                    : "text-gray-700 hover:bg-gray-50"
+                )}
               >
-                Security blocking AI tools? 😱
+                Blog
               </Link>
               <div className="mt-4 pt-4 border-t border-white/20 flex flex-col gap-2">
                 <Link

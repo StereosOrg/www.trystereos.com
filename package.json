@@ -88,6 +88,7 @@
     "firebase": "^11.9.1",
     "firebase-admin": "^13.4.0",
     "framer-motion": "^12.23.26",
+    "graphql": "^16.13.0",
     "graphql-request": "^7.4.0",
     "gray-matter": "^4.0.3",
     "html2canvas": "^1.4.1",
