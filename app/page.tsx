@@ -4,6 +4,7 @@ import { TopNav } from "@/components/top-nav"
 import { Pricing } from "@/components/pricing"
 import { HeroCtaButton } from "@/components/hero-cta-button"
 import { DitheringShader } from "@/components/dithering-shader"
+import InteractiveGatewayDemo from "@/components/interactive-gateway-demo"
 import {
   Sparkles,
   Code2,
@@ -15,7 +16,10 @@ import {
   Github,
   GitBranch,
   KeyIcon,
-  Calendar
+  Calendar,
+  LockIcon,
+  FunnelX,
+  SendIcon
 } from "lucide-react"
 import { LockClosedIcon } from "@radix-ui/react-icons"
 
@@ -45,12 +49,12 @@ export default function Home() {
           <div className="relative z-10 max-w-5xl mx-auto">
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2b2e3a] leading-tight mb-6">
-              Zero data retention Unified AI for the pickiest security climate
+              You don't need archaic AI usage policies to protect your data. 
             </h1>
 
             {/* Subheadline */}
             <p className="text-base md:text-lg text-[#718096] max-w-2xl mb-10">
-             We provision secure OpenAI compatible Unified AI gateways with ZDR-by-default and optional data-loss-prevention policies
+            Give your team the freedom to innovate with the tools they love, while maintaining control and visibility over your organization's AI usage.
             </p>
 
             {/* CTAs */}
@@ -58,67 +62,33 @@ export default function Home() {
               <HeroCtaButton />
             </div>
 
-            {/* Bento Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 mb-16">
-              {/* Large Card - Deep Drilldowns */}
-              <div className="md:col-span-2 md:row-span-3 relative overflow-hidden rounded-xl bg-white border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)] p-8">
-                <div className="relative z-10">
-                  <span className="inline-block px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-[#2b2e3a] bg-[#88edc3] rounded-lg mb-4">
-                    Enterprise AI Management
-                  </span>
-                  <h3 className="text-3xl md:text-4xl font-bold text-[#2b2e3a] mb-4">
-                    Unified AI with no Data Retention
-                  </h3>
-                  <p className="text-base text-[#718096] max-w-md mb-6">
-                    Reduce shadow AI usage, protect data, and enable safe LLM usage.
-                  </p>
+            {/* Interactive Demo replacing Bento Grid */}
+            <div className="mb-6">
+              <InteractiveGatewayDemo />
+            </div>
 
-                  {/* Explainer Video */}
-                  <div className="rounded-lg overflow-hidden border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)]">
-                    <video
-                      src="/stereos-explainer.mp4"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="w-full h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="absolute -right-8 -bottom-8 w-48 h-48 bg-[#88edc3]/30 rounded-full blur-2xl" />
-              </div>
-
-              {/* Small Card - Cross-functional */}
-              <div className="rounded-xl bg-white border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)] p-6">
+            {/* Value-prop badges kept from Bento Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
+              <div className="rounded-xl bg-white border border-[#E2E8F0] p-6">
                 <div className="w-10 h-10 rounded-lg bg-[#88edc3]/50 flex items-center justify-center mb-3">
                   <Globe className="w-5 h-5 text-[#2b2e3a]" />
                 </div>
                 <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">Cross-functional</h3>
-                <p className="text-[#718096] text-sm">
-                  Manage keys for multiple teams from a single source of truth.
-                </p>
+                <p className="text-[#718096] text-sm">Manage keys for multiple teams from a single source of truth.</p>
               </div>
-
-              {/* Small Card - OTEL Compliant */}
-              <div className="rounded-xl bg-white border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)] p-6">
+              <div className="rounded-xl bg-white border border-[#E2E8F0] p-6">
                 <div className="w-10 h-10 rounded-lg bg-[#88edc3]/50 flex items-center justify-center mb-3">
                   <LockClosedIcon className="w-5 h-5 text-[#2b2e3a]" />
                 </div>
                 <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">No Shared Infrastructure</h3>
-                <p className="text-[#718096] text-sm">
-                  Each gateway is provisioned as a self contained environment scoped to your org. 
-                </p>
+                <p className="text-[#718096] text-sm">Each gateway is provisioned as a self-contained environment scoped to your org.</p>
               </div>
-
-              {/* Small Card - CFO-friendly */}
-              <div className="rounded-xl bg-white border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)] p-6">
+              <div className="rounded-xl bg-white border border-[#E2E8F0] p-6">
                 <div className="w-10 h-10 rounded-lg bg-[#88edc3]/50 flex items-center justify-center mb-3">
                   <Globe className="w-5 h-5 text-[#2b2e3a]" />
                 </div>
                 <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">OTEL-native</h3>
-                <p className="text-[#718096] text-sm">
-                  All key gateway events report back to the dashboard as OTEL spans, and you can ingest from other tools
-                </p>
+                <p className="text-[#718096] text-sm">All key gateway events are emitted as OTEL spans; ingest from your other tools, too.</p>
               </div>
             </div>
           </div>
@@ -128,21 +98,21 @@ export default function Home() {
         <section className="px-6 py-20 border-t border-[#E2E8F0] bg-white">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[#2b2e3a] mb-4">
-              Nip shadow AI usage in the 🌹. Provision a shared gateway for your organization.
+              Idiot-proof LLM governance for orgs that care about thoughtful innovation
             </h2>
             <p className="text-base md:text-lg text-[#718096] mb-12 max-w-2xl">
-              Stop choosing between throwing the baby out with the bathwater (banning AI use), and having to implement your own solution on traditional gateway providers
+              Easen up your AI usage policy with a gateway endpoint designed to allow your team to administrate, monitor, and control your organization's AI usage without the need for complex policies or shared infrastructure.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Feature 1 */}
               <div className="rounded-xl bg-white border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)] p-6">
                 <div className="w-10 h-10 rounded-lg bg-[#88edc3]/50 flex items-center justify-center mb-4">
-                  <Sparkles className="w-5 h-5 text-[#2b2e3a]" />
+                  <LockIcon className="w-5 h-5 text-[#2b2e3a]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">Beautiful UX</h3>
+                <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">Data Loss Prevention</h3>
                 <p className="text-[#718096] text-sm">
-                  Intuitive and delightful interface designed for developers and teams. No learning curve.
+                  Take advantage of our built-in DLP features to prevent sensitive data from being sent.
                 </p>
               </div>
 
@@ -171,11 +141,11 @@ export default function Home() {
               {/* Feature 4 */}
               <div className="rounded-xl bg-white border border-[#E2E8F0] shadow-[0_4px_10px_rgba(0,0,0,0.05)] p-6">
                 <div className="w-10 h-10 rounded-lg bg-[#88edc3]/50 flex items-center justify-center mb-4">
-                  <Box className="w-5 h-5 text-[#2b2e3a]" />
+                  <SendIcon className="w-5 h-5 text-[#2b2e3a]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">Ledger Export</h3>
+                <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">Destinations</h3>
                 <p className="text-[#718096] text-sm">
-                  Export your spend data to your favorite tools.
+                 Send your telemetry to any OTEL-compatible destination, including your existing APM and SIEM tools.
                 </p>
               </div>
 
