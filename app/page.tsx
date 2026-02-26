@@ -50,7 +50,7 @@ export default function Home() {
           <div className="relative z-10 max-w-5xl mx-auto">
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2b2e3a] leading-tight mb-6">
-              You don't need archaic AI usage policies to protect your data. 
+              Unleash your organizations innovative potential with isolated OpenAI-compatible enterpriase AI gateways.
             </h1>
 
             {/* Subheadline */}
@@ -82,7 +82,7 @@ export default function Home() {
                   <LockClosedIcon className="w-5 h-5 text-[#2b2e3a]" />
                 </div>
                 <h3 className="text-xl font-bold text-[#2b2e3a] mb-2">No Shared Infrastructure</h3>
-                <p className="text-[#718096] text-sm">Each gateway is provisioned as a self-contained environment scoped to your org.</p>
+                <p className="text-[#718096] text-sm">Each gateway is provisioned as a isolated environment scoped to your org.</p>
               </div>
               <div className="rounded-xl bg-white border border-[#E2E8F0] p-6">
                 <div className="w-10 h-10 rounded-lg bg-[#88edc3]/50 flex items-center justify-center mb-3">
