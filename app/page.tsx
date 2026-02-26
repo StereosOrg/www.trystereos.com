@@ -99,7 +99,7 @@ export default function Home() {
         <section className="px-6 py-20 border-t border-[#E2E8F0] bg-white">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[#2b2e3a] mb-4">
-              OpenAI-compatible endpoints designed so your team can most fast without leaks
+              OpenAI-compatible endpoints designed so your team can move fast without leaks
             </h2>
             <p className="text-base md:text-lg text-[#718096] mb-12 max-w-2xl">
               Easen up your AI usage policy with a gateway endpoint designed to allow your team to administrate, monitor, and control your organization's AI usage without the need for complex policies or shared infrastructure.
