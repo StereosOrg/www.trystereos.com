@@ -15,14 +15,14 @@ const sora = Sora({
 })
 
 export const metadata: Metadata = {
-  title: "Unleash your organizations innovative potential with isolated OpenAI-compatible enterpriase AI gateways.",
+  title: "Agentic Engineering, Unleashed: Isolated AI Gateways for Limitless Innovation",
   description: "Give your team the freedom to innovate with the tools they love",
   generator: 'v0.dev',
   keywords: ['change management', 'attribution', 'developer enablement', 'process management', 'observability', 'analytics', 'LLMs', 'AI'],
   authors: [{ name: 'Stereos' }],
   creator: 'Stereos',
   openGraph: {
-    title: "Unleash your organizations innovative potential with isolated OpenAI-compatible enterpriase AI gateways.",
+    title: "Agentic Engineering, Unleashed: Isolated AI Gateways for Limitless Innovation",
     description: "Give your team the freedom to innovate with the tools they love",
     url: "https://www.trystereos.com",
     siteName: "Stereos",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Unleash your organizations innovative potential with isolated OpenAI-compatible enterpriase AI gateways.",
+    title: "Agentic Engineering, Unleashed: Isolated AI Gateways for Limitless Innovation",
     description: "Give your team the freedom to innovate with the tools they love",
     images: ["https://www.trystereos.com/og-image.png"]
   },
