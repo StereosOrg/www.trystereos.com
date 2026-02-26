@@ -9,6 +9,17 @@ import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { SlackConnectModal } from "@/components/slack-connect-modal"
 
+function SlackIcon({ className }: { className?: string }) {
+  return (
+    <svg width="14" height="14" viewBox="0 0 2447.6 2452.5" className={className} xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
+      <path d="m897.4 0c-135.3.1-244.8 109.9-244.7 245.2-.1 135.3 109.5 245.1 244.8 245.2h244.8v-245.1c.1-135.3-109.5-245.1-244.9-245.3.1 0 .1 0 0 0m0 654h-652.6c-135.3.1-244.9 109.9-244.8 245.2-.2 135.3 109.4 245.1 244.7 245.3h652.7c135.3-.1 244.9-109.9 244.8-245.2.1-135.4-109.5-245.2-244.8-245.3z" fill="#36c5f0"/>
+      <path d="m2447.6 899.2c.1-135.3-109.5-245.1-244.8-245.2-135.3.1-244.9 109.9-244.8 245.2v245.3h244.8c135.3-.1 244.9-109.9 244.8-245.3zm-652.7 0v-654c.1-135.2-109.4-245-244.7-245.2-135.3.1-244.9 109.9-244.8 245.2v654c-.2 135.3 109.4 245.1 244.7 245.3 135.3-.1 244.9-109.9 244.8-245.3z" fill="#2eb67d"/>
+      <path d="m1550.1 2452.5c135.3-.1 244.9-109.9 244.8-245.2.1-135.3-109.5-245.1-244.8-245.2h-244.8v245.2c-.1 135.2 109.5 245 244.8 245.2zm0-654.1h652.7c135.3-.1 244.9-109.9 244.8-245.2.2-135.3-109.4-245.1-244.7-245.3h-652.8c-135.3.1-244.9 109.9-244.8 245.2-.1 135.4 109.5 245.2 244.8 245.3z" fill="#ecb22e"/>
+      <path d="m0 1553.2c-.1 135.3 109.5 245.1 244.8 245.2 135.3-.1 244.9-109.9 244.8-245.2v-245.2h-244.8c-135.3.1-244.9 109.9-244.8 245.2zm652.7 0v654c-.2 135.3 109.4 245.1 244.7 245.3 135.3-.1 244.9-109.9 244.8-245.2v-653.9c.2-135.3-109.4-245.1-244.7-245.3-135.4 0-244.9 109.8-244.8 245.1 0 0 0 .1 0 0z" fill="#e01e5a"/>
+    </svg>
+  )
+}
+
 export function TopNav() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [slackModalOpen, setSlackModalOpen] = useState(false)
@@ -79,6 +90,15 @@ export function TopNav() {
               >
                 Blog
               </Link>
+              <Link
+                href="https://join.slack.com/t/trystereos/shared_invite/zt-384mjl0hs-X2WTb8sc1xFrrDKULcgboQ"
+                target="_blank"
+                rel="noreferrer"
+                className="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors flex items-center gap-1.5"
+              >
+                <SlackIcon />
+                Slack Community
+              </Link>
             </nav>
 
             {/* Desktop right: Log in + CTA */}
@@ -147,6 +167,16 @@ export function TopNav() {
                 )}
               >
                 Blog
+              </Link>
+              <Link
+                href="https://join.slack.com/t/trystereos/shared_invite/zt-384mjl0hs-X2WTb8sc1xFrrDKULcgboQ"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center gap-2"
+              >
+                <SlackIcon />
+                Slack Community
               </Link>
               <div className="mt-4 pt-4 border-t border-white/20 flex flex-col gap-2">
                 <Link
