@@ -50,7 +50,7 @@ export default function Home() {
           <div className="relative z-10 max-w-5xl mx-auto">
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2b2e3a] leading-tight mb-6">
-              Unleash your organizations innovative potential with isolated OpenAI-compatible enterpriase AI gateways.
+              Unleash your teams potential with isolated OpenAI-compatible enterprise AI gateways.
             </h1>
 
             {/* Subheadline */}
