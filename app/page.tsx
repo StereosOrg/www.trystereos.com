@@ -55,7 +55,7 @@ export default function Home() {
 
             {/* Subheadline */}
             <p className="text-base md:text-lg text-[#718096] max-w-2xl mb-10">
-            Give your team the freedom to innovate with the tools they love, while maintaining control and visibility over your organization's AI usage.
+            Give your team the freedom to explore with zero data retention Anthropic and OpenAI models while maintaining control and visibility over your organization's AI usage.
             </p>
 
             {/* CTAs */}
