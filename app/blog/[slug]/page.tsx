@@ -139,10 +139,6 @@ export default async function BlogPostPage({ params }: Props) {
             {/* Green accent top bar */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-[#88edc3]" />
             <div className="relative px-8 py-12 text-center">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#E2E8F0] bg-[#88edc3]/20 px-3 py-1 mb-6">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#88edc3]" />
-                <span className="text-xs font-semibold text-[#2b2e3a]">14-day free trial</span>
-              </div>
               <h2 className="text-2xl md:text-3xl font-bold text-[#2b2e3a] mb-4 leading-snug">
                 Stop writing policies.{" "}
                 <br />
@@ -153,14 +149,8 @@ export default async function BlogPostPage({ params }: Props) {
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 <Link
-                  href="https://app.trystereos.com/"
-                  className="inline-flex items-center justify-center rounded-lg bg-[#2b2e3a] text-white font-medium shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:bg-[#1a1c24] transition-colors h-11 px-6 text-sm"
-                >
-                  Start 14-day free trial
-                </Link>
-                <Link
-                  href="https://cal.com/jbohrman/45-min-meeting"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#E2E8F0] bg-white font-medium text-[#2b2e3a] hover:bg-gray-50 transition-colors h-11 px-6 text-sm"
+                  href="/#book-demo"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#2b2e3a] text-white font-medium shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:bg-[#1a1c24] transition-colors h-11 px-6 text-sm"
                 >
                   Schedule a demo
                   <Calendar size={15} />

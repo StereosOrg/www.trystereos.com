@@ -112,7 +112,7 @@ export function ApplicationForm() {
       }
 
       const response = await res.json()
-      ;(window as any).cioanalytics?.track("Partner Application Submitted")
+      ;(window as any).posthog?.capture("Partner Application Submitted")
       router.push(response.redirect)
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Something went wrong. Please try again.")

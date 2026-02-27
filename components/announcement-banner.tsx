@@ -46,9 +46,6 @@ export function AnnouncementBanner() {
               Detect the vectors of risk in your binaries with Nabla, our fair-source SAST/SCA API
               </span>
             </div>
-            <div className="sm:hidden text-sm">
-              <span className="font-semibold">Get a 14-day trial</span>
-            </div>
           </div>
           
           <div className="flex items-center gap-2">

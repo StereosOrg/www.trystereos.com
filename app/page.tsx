@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { TopNav } from "@/components/top-nav"
-import { Pricing } from "@/components/pricing"
+import { CalEmbed } from "@/components/cal-embed"
 import { HeroCtaButton } from "@/components/hero-cta-button"
 import { DitheringShader } from "@/components/dithering-shader"
 import InteractiveGatewayDemo from "@/components/interactive-gateway-demo"
@@ -16,7 +16,6 @@ import {
   Github,
   GitBranch,
   KeyIcon,
-  Calendar,
   LockIcon,
   FunnelX,
   SendIcon
@@ -175,16 +174,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="px-6 py-20 border-t border-[#E2E8F0] bg-white">
+        {/* Book a Demo Section */}
+        <section id="book-demo" className="px-6 py-20 border-t border-[#E2E8F0] bg-white">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[#2b2e3a] mb-4">
-              Pricing Commitments
+              Book a Demo
             </h2>
             <p className="text-base md:text-lg text-[#718096] mb-12 max-w-2xl">
-              Our pricing is simple and transparent. You only pay for what you use — $2400/mo platform fee plus usage-based pricing for managed keys and telemetry. We also offer a 14-day free trial.
+              See Stereos in action. Pick a time and we'll walk you through how to provision a ZDR gateway for your team.
             </p>
-            <Pricing />
+            <div className="min-h-[600px]">
+              <CalEmbed />
+            </div>
           </div>
         </section>
         {/* Stats Bar */}
@@ -211,40 +212,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Bottom CTA Section */}
-        <section className="px-6 py-20 border-t border-[#E2E8F0] bg-white">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#2b2e3a] mb-4">
-              Ready to deploy a gateway?
-            </h2>
-            <p className="text-base md:text-lg text-[#718096] mb-8">
-              Create an account in seconds.
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="rounded-lg bg-[#2b2e3a] text-white font-medium shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:bg-[#1a1c24] transition-colors h-12 px-6"
-              >
-                <Link href="https://cal.com/jbohrman/45-min-meeting">
-                  Schedule a demo
-                  <Calendar className="ml-2" size={18} />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="rounded-lg border border-[#E2E8F0] bg-white font-medium text-[#2b2e3a] hover:bg-gray-50 transition-colors h-12 px-6"
-              >
-                <Link href="https://app.trystereos.com/">
-                  Start a 14-day free trial
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
 
         <SiteFooter />
       </main>

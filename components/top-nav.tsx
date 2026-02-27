@@ -87,16 +87,16 @@ export function TopNav() {
               <Link
                 href="https://app.trystereos.com/"
                 className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
-                onClick={() => (window as any).cioanalytics?.track("Header Button Clicked", { button: "Login" })}
+                onClick={() => (window as any).posthog?.capture("Header Button Clicked", { button: "Login" })}
               >
                 Log in
               </Link>
               <Button
                 asChild
                 className="rounded-lg bg-gray-900 text-white font-semibold shadow-sm hover:bg-gray-800 transition-colors h-9 px-4"
-                onClick={() => (window as any).cioanalytics?.track("Header Button Clicked", { button: "Get Started" })}
+                onClick={() => (window as any).posthog?.capture("Header Button Clicked", { button: "Schedule a Demo" })}
               >
-                <Link href="https://app.trystereos.com/">Get started</Link>
+                <Link href="https://cal.com/jbohrman/45-min-meeting" target="_blank" rel="noreferrer">Schedule a demo</Link>
               </Button>
             </div>
 
@@ -162,7 +162,7 @@ export function TopNav() {
               <div className="mt-4 pt-4 border-t border-white/20 flex flex-col gap-2">
                 <Link
                   href="https://app.trystereos.com/"
-                  onClick={() => { (window as any).cioanalytics?.track("Header Button Clicked", { button: "Login" }); setMobileOpen(false) }}
+                  onClick={() => { (window as any).posthog?.capture("Header Button Clicked", { button: "Login" }); setMobileOpen(false) }}
                   className="px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 text-center"
                 >
                   Log in
@@ -170,10 +170,10 @@ export function TopNav() {
                 <Button
                   asChild
                   className="w-full rounded-lg bg-gray-900 text-white font-semibold shadow-sm hover:bg-gray-800 h-11"
-                  onClick={() => (window as any).cioanalytics?.track("Header Button Clicked", { button: "Get Started" })}
+                  onClick={() => (window as any).posthog?.capture("Header Button Clicked", { button: "Schedule a Demo" })}
                 >
-                  <Link href="https://app.trystereos.com/" onClick={() => setMobileOpen(false)}>
-                    Get started
+                  <Link href="https://cal.com/jbohrman/45-min-meeting" target="_blank" rel="noreferrer" onClick={() => setMobileOpen(false)}>
+                    Schedule a demo
                   </Link>
                 </Button>
               </div>

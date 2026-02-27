@@ -112,7 +112,6 @@ export function HeroSection() {
 
       analytics.identify(normalizedEmail, analyticsMetadata)
       analytics.track("newsletter_signup", analyticsMetadata)
-      ;(window as any).cioanalytics?.track("newsletter_signup", analyticsMetadata)
 
       toast({
         title: "You're on the list",

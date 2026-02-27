@@ -359,13 +359,11 @@ export default function InteractiveGatewayDemo() {
                     duration={3}
                   />
                   <a
-                    href="https://app.trystereos.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/#book-demo"
                     className="relative z-10 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm border border-[#88edc3] rounded-lg px-3 py-1.5 text-xs font-semibold text-[#2b2e3a] hover:bg-white shadow-sm transition-all hover:shadow-md whitespace-nowrap"
                   >
                     <KeyRound className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    Start a 14-day trial for a key!
+                    Book a demo
                     <ArrowRight className="w-3 h-3 text-emerald-600 shrink-0" />
                   </a>
                 </div>

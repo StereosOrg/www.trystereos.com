@@ -1,35 +1,35 @@
 declare global {
   interface Window {
-    analytics: any
+    posthog: any
   }
 }
 
 export function useAnalytics() {
-  const getAnalytics = () => {
+  const getPosthog = () => {
     if (typeof window !== 'undefined') {
-      return window.analytics
+      return window.posthog
     }
     return null
   }
 
   const identify = (userId: string, traits?: Record<string, any>) => {
-    const analytics = getAnalytics()
-    if (analytics) {
-      analytics.identify(userId, traits)
+    const ph = getPosthog()
+    if (ph) {
+      ph.identify(userId, traits)
     }
   }
 
   const track = (event: string, properties?: Record<string, any>) => {
-    const analytics = getAnalytics()
-    if (analytics) {
-      analytics.track(event, properties)
+    const ph = getPosthog()
+    if (ph) {
+      ph.capture(event, properties)
     }
   }
 
   const page = (name?: string, properties?: Record<string, any>) => {
-    const analytics = getAnalytics()
-    if (analytics) {
-      analytics.page(name, properties)
+    const ph = getPosthog()
+    if (ph) {
+      ph.capture('$pageview', { name, ...properties })
     }
   }
 

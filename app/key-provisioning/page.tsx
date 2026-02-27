@@ -203,7 +203,7 @@ export default function KeyProvisioningPage() {
               Take back control of your AI spend
             </h2>
             <p className="text-base md:text-lg text-[#718096] mb-8">
-              Provision your first virtual keys in minutes with a free 14-day trial.
+              See how virtual key management works for your org.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button
@@ -211,19 +211,9 @@ export default function KeyProvisioningPage() {
                 size="lg"
                 className="rounded-lg bg-[#2b2e3a] text-white font-medium shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:bg-[#1a1c24] transition-colors h-12 px-6"
               >
-                <Link href="https://cal.com/jbohrman/45-min-meeting">
-                  Schedule a demo
+                <Link href="/#book-demo">
+                  Book a demo
                   <Calendar className="ml-2" size={18} />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="rounded-lg border border-[#E2E8F0] bg-white font-medium text-[#2b2e3a] hover:bg-gray-50 transition-colors h-12 px-6"
-              >
-                <Link href="https://app.trystereos.com/">
-                  Start a 14-day free trial
                 </Link>
               </Button>
             </div>
