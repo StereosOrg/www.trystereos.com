@@ -1,13 +1,12 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { SlackConnectModal } from "@/components/slack-connect-modal"
 
 function SlackIcon({ className }: { className?: string }) {
   return (
@@ -22,28 +21,10 @@ function SlackIcon({ className }: { className?: string }) {
 
 export function TopNav() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [slackModalOpen, setSlackModalOpen] = useState(false)
   const pathname = usePathname()
-
-  useEffect(() => {
-    const hasSeenModal = localStorage.getItem("stereos_slack_modal_seen")
-    if (!hasSeenModal) {
-      const timer = setTimeout(() => setSlackModalOpen(true), 2000)
-      return () => clearTimeout(timer)
-    }
-  }, [])
-
-  function handleSlackModalChange(open: boolean) {
-    setSlackModalOpen(open)
-    if (!open) {
-      localStorage.setItem("stereos_slack_modal_seen", "1")
-    }
-  }
 
   return (
     <>
-      <SlackConnectModal open={slackModalOpen} onOpenChange={handleSlackModalChange} />
-
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200/80 bg-white/80 backdrop-blur-md shadow-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex h-16 items-center justify-between gap-6">
